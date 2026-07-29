@@ -99,7 +99,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
-        <script src="//code.tidio.co/ci_8435e1afc2cd4ddbb0806db844693ee2.js" async></script>
+        <script src="//code.tidio.co/e2oyht9rhdaure2n1j1zfxqzciypichk.js" async></script>
       </body>
     </html>
   );
