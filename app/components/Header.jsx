@@ -6,8 +6,8 @@ export default function Header() {
           <a href="#top" className="brand"><img src="/logo.jpg" alt="Spotless Spaces logo"/> Spotless Spaces</a>
           <div className="navlinks">
             <a href="#values">Values</a>
-            <a href="#services">What We Offer</a>
             <a href="#types-of-clean">Services</a>
+            <a href="#services">What We Offer</a>
             <a href="#pricing">Pricing</a>
             <a href="#difference">Difference</a>
             <a href="#reviews">Reviews</a>
@@ -24,8 +24,8 @@ export default function Header() {
       </div>
       <div className="mobile-menu" id="mobile-menu">
         <a href="#values">Our Values</a>
-        <a href="#services">What We Offer</a>
         <a href="#types-of-clean">Services</a>
+        <a href="#services">What We Offer</a>
         <a href="#pricing">Pricing</a>
         <a href="#difference">Our Difference</a>
         <a href="#reviews">Reviews</a>

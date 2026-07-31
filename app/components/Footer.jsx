@@ -32,6 +32,15 @@ export default function Footer() {
               <li>Sunday: Closed</li>
             </ul>
           </div>
+          <div>
+            <h5>Service Areas</h5>
+            <ul>
+              <li>St. Paul</li>
+              <li>Woodbury</li>
+              <li>Eagan</li>
+              <li>Maplewood</li>
+            </ul>
+          </div>
         </div>
         <div className="foot-bottom">
           <span>© 2026 Spotless Spaces. All rights reserved.</span>

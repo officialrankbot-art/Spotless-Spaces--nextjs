@@ -12,12 +12,10 @@ export default function TypesOfClean() {
             <span className="freq">Available one-time, bi-weekly, or monthly</span>
             <h3>Deep Clean</h3>
             <p className="desc">A thorough, top-to-bottom clean that tackles dirt and grime in every hard-to-reach spot.</p>
-            <p style={{fontSize: '.9rem', color: 'var(--navy-800)', fontWeight: '700', margin: '-6px 0 16px'}}>Starting at $150 — final price depends on bedrooms, bathrooms &amp; square footage.</p>
             <ul>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dusting, vacuuming, mopping &amp; surfaces</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Inside oven, fridge &amp; cabinets</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Exterior appliances wiped &amp; sanitized</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Baseboards, vents &amp; light fixtures</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Grout &amp; tile detailing</li>
             </ul>
           </div>
           <div className="type-card reveal">
@@ -32,7 +30,7 @@ export default function TypesOfClean() {
             </ul>
           </div>
           <div className="type-card reveal">
-            <span className="freq">Custom schedule</span>
+            <span className="freq freq-commercial">Custom schedule</span>
             <h3>Commercial Clean</h3>
             <p className="desc">Scheduled service for offices, retail, and other business spaces, tailored to your hours and foot traffic.</p>
             <ul>
@@ -47,6 +45,12 @@ export default function TypesOfClean() {
           <div className="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
           <p>Every booking includes a clear checklist upfront, so you always know exactly what's covered.</p>
         </div>
+        <p style={{textAlign: 'center', marginTop: '28px', fontSize: '.95rem', color: 'var(--slate)'}}>
+          Please review our <a href="/C_guidelines_Deep_Clean.pdf" target="_blank" rel="noopener" style={{color: 'var(--sky-600)', fontWeight: '700', textDecoration: 'underline'}}>Deep Clean Customer Guidelines</a> before your first cleaning.
+        </p>
+        <p style={{textAlign: 'center', marginTop: '10px', fontSize: '.95rem', color: 'var(--slate)'}}>
+          Please review our <a href="/C_guidelines_move-in_out.pdf" target="_blank" rel="noopener" style={{color: 'var(--sky-600)', fontWeight: '700', textDecoration: 'underline'}}>Move-In / Move-Out Customer Guidelines</a> before your first cleaning.
+        </p>
       </div>
     </section>
   );

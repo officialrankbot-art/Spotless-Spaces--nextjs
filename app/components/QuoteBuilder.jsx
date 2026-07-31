@@ -18,13 +18,17 @@ export default function QuoteBuilder() {
 
             {/* STEP 1 */}
             <div className="qb-step" data-step="1">
-              <div className="qb-label">Step 1 of 4 — Property Type</div>
-              <div className="qb-options">
-                <div className="qb-opt" data-field="property" data-value="Residential">
+              <div className="qb-label">Step 1 of 4 — What kind of clean?</div>
+              <div className="qb-options cols-3">
+                <div className="qb-opt" data-field="service" data-value="ResidentialDeep">
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
-                  Residential
+                  Residential — Deep Clean
                 </div>
-                <div className="qb-opt" data-field="property" data-value="Commercial">
+                <div className="qb-opt" data-field="service" data-value="ResidentialMove">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="8" width="13" height="10"/><path d="M16 11h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+                  Residential — Move-In / Move-Out
+                </div>
+                <div className="qb-opt" data-field="service" data-value="Commercial">
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="3" width="16" height="18"/><path d="M9 21v-4h6v4"/><path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1"/></svg>
                   Commercial
                 </div>

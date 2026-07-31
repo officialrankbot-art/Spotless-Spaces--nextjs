@@ -10,18 +10,17 @@ export default function Pricing() {
         <div className="pricing-grid">
           <div className="price-card featured reveal">
             <h3>Deep Clean</h3>
-            <div className="amount"><span>Starting At&nbsp;</span>$150</div>
+            <div className="amount"><span>Starting At&nbsp;</span>$180</div>
             <ul>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dusting, vacuuming &amp; mopping</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Inside oven, fridge &amp; cabinets</li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Exterior appliances wiped &amp; sanitized</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Baseboards, vents &amp; light fixtures</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Grout &amp; tile detailing</li>
             </ul>
             <a href="#quote" className="btn btn-gold" style={{width: '100%'}}>Choose Deep Clean</a>
           </div>
           <div className="price-card reveal">
             <h3>Move-In / Move-Out Clean</h3>
-            <div className="amount"><span>Starting At&nbsp;</span>$300</div>
+            <div className="amount"><span>Starting At&nbsp;</span>$360</div>
             <ul>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Inside &amp; outside of cabinets and closets</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Appliance interiors &amp; exteriors</li>

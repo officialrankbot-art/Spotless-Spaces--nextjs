@@ -47,7 +47,7 @@ export default function SiteScripts() {
     (function () {
       const nextBtn = document.getElementById('qb-next');
       if (!nextBtn) return;
-      const state = { property: null, size: null, frequency: null, mult: 1 };
+      const state = { service: null, size: null, frequency: null, mult: 1 };
       let currentStep = 1;
       const steps = document.querySelectorAll('.qb-step');
       const dots = document.querySelectorAll('.qb-step-dot');
@@ -55,11 +55,17 @@ export default function SiteScripts() {
       const nav = document.getElementById('qb-nav');
 
       const sizeOptionsByType = {
-        Residential: [
-          { label: 'Studio / 1BR', value: 'small', base: 150 },
-          { label: '2–3 Bedroom', value: 'medium', base: 150 },
-          { label: '4+ Bedroom', value: 'large', base: 210 },
-          { label: '5,000+ sq ft', value: 'xl', base: 290 },
+        ResidentialDeep: [
+          { label: 'Studio / 1BR', value: 'small', base: 180 },
+          { label: '2–3 Bedroom', value: 'medium', base: 180 },
+          { label: '4+ Bedroom', value: 'large', base: 252 },
+          { label: '5,000+ sq ft', value: 'xl', base: 348 },
+        ],
+        ResidentialMove: [
+          { label: 'Studio / 1BR', value: 'small', base: 360 },
+          { label: '2–3 Bedroom', value: 'medium', base: 360 },
+          { label: '4+ Bedroom', value: 'large', base: 504 },
+          { label: '5,000+ sq ft', value: 'xl', base: 696 },
         ],
         Commercial: [
           { label: 'Under 1,500 sq ft', value: 'small', base: 180 },
@@ -67,6 +73,12 @@ export default function SiteScripts() {
           { label: '4,000–8,000 sq ft', value: 'large', base: 520 },
           { label: '8,000+ sq ft', value: 'xl', base: 850 },
         ],
+      };
+
+      const serviceLabels = {
+        ResidentialDeep: 'residential deep',
+        ResidentialMove: 'residential move-in / move-out',
+        Commercial: 'commercial',
       };
 
       function attachOptionHandlers(scope) {
@@ -85,7 +97,7 @@ export default function SiteScripts() {
       }
 
       function renderSizeOptions() {
-        const type = state.property || 'Residential';
+        const type = state.service || 'ResidentialDeep';
         const container = document.getElementById('size-options');
         container.innerHTML = '';
         sizeOptionsByType[type].forEach((opt) => {
@@ -104,7 +116,7 @@ export default function SiteScripts() {
       attachOptionHandlers(document.querySelector('[data-step="3"]'));
 
       function isStepValid(n) {
-        if (n === 1) return !!state.property;
+        if (n === 1) return !!state.service;
         if (n === 2) return !!state.size;
         if (n === 3) return !!state.frequency;
         return true;
@@ -156,7 +168,7 @@ export default function SiteScripts() {
           const name = document.getElementById('q-name').value.trim();
           document.getElementById('confirm-name').textContent = name || 'there';
           document.getElementById('confirm-details').textContent =
-            (state.property || '').toLowerCase() + ' ' + (state.frequency || '').toLowerCase() + ' cleaning';
+            (serviceLabels[state.service] || '') + ' ' + (state.frequency || '').toLowerCase() + ' cleaning';
           goToStep('confirm');
         }
       };
