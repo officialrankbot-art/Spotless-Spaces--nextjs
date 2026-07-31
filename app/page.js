@@ -21,8 +21,8 @@ export default function Home() {
       <div id="top"></div>
       <Hero />
       <Values />
-      <WhatWeOffer />
       <TypesOfClean />
+      <WhatWeOffer />
       <QuoteBuilder />
       <Pricing />
       <Walkthrough />
