@@ -9,110 +9,20 @@ export default function FAQ() {
         <div className="reveal">
           <div className="faq-item">
             <div className="faq-q">What's included in a deep cleaning?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-            <div className="faq-a"><p>Our deep clean covers every room top to bottom:</p>
-              <h4>🏠 All Areas / Rooms</h4>
-              <ul>
-                <li>Dust high areas (corners, edges, vents)</li>
-                <li>Clean accessible ceiling fans</li>
-                <li>Wipe accessible light fixtures (excluding chandeliers)</li>
-                <li>Dust all reachable furniture</li>
-                <li>Clean all glass surfaces and mirrors</li>
-                <li>Disinfect light switches and door handles</li>
-                <li>Clean baseboards</li>
-                <li>Empty trash cans and replace liners</li>
-                <li>Vacuum floors</li>
-                <li>Mop hard surface floors</li>
-              </ul>
-              <h4>🍽️ Kitchen</h4>
-              <ul>
-                <li>Dust high areas</li>
-                <li>Clean accessible light fixtures and fans (excluding chandeliers)</li>
-                <li>Clean interior windows (we do not clean the exterior or flip in for any reason)</li>
-                <li>Clean and disinfect microwave (inside, outside, and underneath)</li>
-                <li>Wipe backsplash and countertops</li>
-                <li>Load dishwasher (if applicable)</li>
-                <li>Clean exterior of stove hood, stovetop, and grates</li>
-                <li>Polish stainless steel</li>
-                <li>Wipe exterior of appliances (fridge, stove, coffee maker, toaster, etc.)</li>
-                <li>Clean and polish sink</li>
-                <li>Disinfect light switches</li>
-                <li>Clean baseboards</li>
-                <li>Empty trash/recycling and replace liners</li>
-                <li>Vacuum and mop floors</li>
-              </ul>
-              <h4>🛁 Bathrooms</h4>
-              <ul>
-                <li>Dust high areas and vents</li>
-                <li>Clean light fixtures</li>
-                <li>Clean interior windows (we do not clean the exterior or flip in for any reason)</li>
-                <li>Wipe mirrors and glass surfaces</li>
-                <li>Clean and disinfect toilets (including behind)</li>
-                <li>Scrub shower walls, doors, shower-head, hose, and soap dish</li>
-                <li>Clean and disinfect tub inside &amp; outside</li>
-                <li>Clean and disinfect sink</li>
-                <li>Disinfect light switches</li>
-                <li>Clean baseboards</li>
-                <li>Empty trash and replace liners</li>
-                <li>Vacuum and mop floors</li>
-              </ul>
+            <div className="faq-a"><p>Our deep clean covers every room top to bottom — kitchen, bathrooms, and all living areas, including the detail work (baseboards, vents, fixtures, high dusting) that a standard clean doesn't touch. It's the recommended starting point for every new client.</p>
+              <p><a href="/Deep_Clean_Checklist.pdf" target="_blank" rel="noopener" style={{color: 'var(--sky-600)', fontWeight: '700', textDecoration: 'underline'}}>View the full Deep Clean checklist →</a></p>
+            </div>
+          </div>
+          <div className="faq-item">
+            <div className="faq-q">What's included in a standard cleaning?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div className="faq-a"><p>Standard cleans cover surface-level upkeep — wiping, sanitizing, vacuuming, and mopping across the kitchen, bathrooms, bedrooms, and living areas. We recommend this as a recurring service (weekly, bi-weekly, or monthly) for clients who've already had their first Deep Clean, since it's built for maintaining a space rather than resetting it.</p>
+              <p><a href="/Standard_Clean_Checklist.pdf" target="_blank" rel="noopener" style={{color: 'var(--sky-600)', fontWeight: '700', textDecoration: 'underline'}}>View the full Standard Clean checklist →</a></p>
             </div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What's included in a move in/move out cleaning?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-            <div className="faq-a"><p>Our most detailed service, built to satisfy landlord and buyer inspections:</p>
-              <h4>Kitchen</h4>
-              <ul>
-                <li>Remove cobwebs</li>
-                <li>Clean fans that are reachable</li>
-                <li>Clean interior windows &amp; window sills (we do not clean exterior windows or flip windows due to insurance restrictions)</li>
-                <li>Clean inside all cabinets</li>
-                <li>Clean front of all cabinets</li>
-                <li>Clean above cabinets</li>
-                <li>Clean inside all drawers</li>
-                <li>Clean inside dishwasher, including filter</li>
-                <li>Clean stove top</li>
-                <li>Clean inside oven</li>
-                <li>Clean countertops</li>
-                <li>Clean inside &amp; outside of microwave, including filters (if reusable)</li>
-                <li>Clean inside fridge (all shelves, compartments, and freezer)</li>
-                <li>Clean appliance exteriors</li>
-                <li>Clean behind fridge (management must pull unit out prior to arrival)</li>
-                <li>Clean light switches</li>
-                <li>Clean and polish sink</li>
-                <li>Vacuum &amp; mop hard surface floors</li>
-              </ul>
-              <h4>Bathroom</h4>
-              <ul>
-                <li>Remove cobwebs</li>
-                <li>Clean light fixtures</li>
-                <li>Clean &amp; disinfect toilets, tubs, and showers</li>
-                <li>Clean sinks and countertops</li>
-                <li>Clean inside and outside of cabinets, vanities, drawers</li>
-                <li>Clean light switches</li>
-                <li>Vacuum &amp; mop hard surface floors</li>
-              </ul>
-              <h4>Laundry Room/Area</h4>
-              <ul>
-                <li>Remove cobwebs</li>
-                <li>Clean racks and shelving</li>
-                <li>Clean exterior of washer machine</li>
-                <li>Clean exterior of dryer</li>
-                <li>Clean inside washer machine (including detergent cup)</li>
-                <li>Clean inside dryer (including lint trap)</li>
-                <li>Clean washer and dryer pans</li>
-                <li>Vacuum &amp; mop hard surface floors</li>
-              </ul>
-              <h4>All Rooms</h4>
-              <ul>
-                <li>Remove cobwebs</li>
-                <li>Clean interior windows &amp; window sills (no exterior window cleaning or flipping windows)</li>
-                <li>Clean fans that are reachable</li>
-                <li>Clean inside closets</li>
-                <li>Clean light switches</li>
-                <li>Vacuum &amp; mop hard surface floors</li>
-                <li>Wipe baseboards</li>
-                <li>Take apart and deep clean cooling filters</li>
-              </ul>
+            <div className="faq-a"><p>Our most detailed service, built to satisfy landlord and buyer inspections — covering the kitchen, bathrooms, laundry area, and every room, including cabinet and appliance interiors and closets.</p>
+              <p><a href="/Move-In_Move-Out_Clean_Checklist.pdf" target="_blank" rel="noopener" style={{color: 'var(--sky-600)', fontWeight: '700', textDecoration: 'underline'}}>View the full Move-In / Move-Out checklist →</a></p>
             </div>
           </div>
           <div className="faq-item">
@@ -143,6 +53,13 @@ export default function FAQ() {
           <div className="faq-item">
             <div className="faq-q">Do you require a deposit?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
             <div className="faq-a"><p>Upon your booking, a 25% non-refundable deposit is required to secure your appointment. This allows us to hold your scheduled cleaning and assign our resources effectively. Your deposit will be put toward the total cost of your clean.</p></div>
+          </div>
+          <div className="faq-item">
+            <div className="faq-q">What can I expect on the day of my clean?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div className="faq-a">
+              <p>We keep you in the loop the whole way through with automated text reminders — we'll reach out 48 hours before your appointment, again when your cleaner is on the way, and once more upon completion with photos of the finished work.</p>
+              <p>Need to adjust anything? Just reach out to us at <a href="tel:+16122604646" style={{color: 'var(--sky-600)', fontWeight: '700'}}>612-260-4646</a> or <a href="mailto:info@spotlessspaces-cleaning.com" style={{color: 'var(--sky-600)', fontWeight: '700'}}>info@spotlessspaces-cleaning.com</a>.</p>
+            </div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Do you clean commercial spaces?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>

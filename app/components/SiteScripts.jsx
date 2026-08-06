@@ -42,41 +42,53 @@ export default function SiteScripts() {
       faqHandlers.push([q, handler]);
     });
 
+    // Shared helper: submit a Netlify-detected form via fetch (no page reload)
+    function submitToNetlify(form) {
+      const formData = new FormData(form);
+      const body = new URLSearchParams(formData).toString();
+      return fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      });
+    }
+    // Belt-and-suspenders: never let either form actually navigate the page
+    ['quote-form', 'walkthrough-form-tag'].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('submit', (e) => e.preventDefault());
+    });
+
     // Quote builder
     let qbCleanup = () => {};
     (function () {
       const nextBtn = document.getElementById('qb-next');
       if (!nextBtn) return;
-      const state = { service: null, size: null, frequency: null, mult: 1 };
+      const state = { service: null, size: null, frequency: null, mult: 1, hours: 0 };
       let currentStep = 1;
       const steps = document.querySelectorAll('.qb-step');
       const dots = document.querySelectorAll('.qb-step-dot');
       const backBtn = document.getElementById('qb-back');
       const nav = document.getElementById('qb-nav');
 
-      const sizeOptionsByType = {
-        ResidentialDeep: [
-          { label: 'Studio / 1BR', value: 'small', base: 180 },
-          { label: '2–3 Bedroom', value: 'medium', base: 180 },
-          { label: '4+ Bedroom', value: 'large', base: 252 },
-          { label: '5,000+ sq ft', value: 'xl', base: 348 },
-        ],
-        ResidentialMove: [
-          { label: 'Studio / 1BR', value: 'small', base: 360 },
-          { label: '2–3 Bedroom', value: 'medium', base: 360 },
-          { label: '4+ Bedroom', value: 'large', base: 504 },
-          { label: '5,000+ sq ft', value: 'xl', base: 696 },
-        ],
-        Commercial: [
-          { label: 'Under 1,500 sq ft', value: 'small', base: 180 },
-          { label: '1,500–4,000 sq ft', value: 'medium', base: 320 },
-          { label: '4,000–8,000 sq ft', value: 'large', base: 520 },
-          { label: '8,000+ sq ft', value: 'xl', base: 850 },
-        ],
-      };
+      // Hourly labor rate used for every estimate
+      const HOURLY_RATE = 67.5;
+
+      // Crew-hour tiers by bedroom/bathroom count, taken from the master pricing
+      // guide (mid-point of each range). Square footage is collected separately
+      // as a reference sanity-check only — it does not factor into the estimate.
+      const bedroomTiers = [
+        { label: 'Studio (1 bath)', value: 'studio', hours: { ResidentialDeep: 2.25, ResidentialStandard: 1.25, ResidentialMove: 2.75 } },
+        { label: '1 Bed / 1 Bath', value: '1bed', hours: { ResidentialDeep: 2.75, ResidentialStandard: 1.75, ResidentialMove: 3.25 } },
+        { label: '2 Bed / 1 Bath', value: '2bed', hours: { ResidentialDeep: 3.5, ResidentialStandard: 2.25, ResidentialMove: 4.25 } },
+        { label: '3 Bed / 2 Bath', value: '3bed', hours: { ResidentialDeep: 4.5, ResidentialStandard: 3, ResidentialMove: 5.5 } },
+        { label: '4 Bed / 2–3 Bath', value: '4bed', hours: { ResidentialDeep: 6, ResidentialStandard: 4, ResidentialMove: 7.25 } },
+        { label: '5+ Bed / 3+ Bath', value: '5bed', hours: { ResidentialDeep: 8, ResidentialStandard: 5.25, ResidentialMove: 9.75 } },
+        { label: '6+ Bed / 4+ Bath', value: '6bed', hours: { ResidentialDeep: 10.5, ResidentialStandard: 7, ResidentialMove: 13 } },
+      ];
 
       const serviceLabels = {
         ResidentialDeep: 'residential deep',
+        ResidentialStandard: 'residential standard',
         ResidentialMove: 'residential move-in / move-out',
         Commercial: 'commercial',
       };
@@ -89,24 +101,35 @@ export default function SiteScripts() {
             scope.querySelectorAll(`.qb-opt[data-field="${field}"]`).forEach((o) => o.classList.remove('selected'));
             opt.classList.add('selected');
             state[field] = opt.dataset.value;
-            if (field === 'size') state.base = parseFloat(opt.dataset.base);
+            if (field === 'size') state.hours = parseFloat(opt.dataset.hours);
             if (field === 'frequency') state.mult = parseFloat(opt.dataset.mult);
             nextBtn.disabled = false;
+            updateNextLabel();
           });
         });
+      }
+
+      function updateNextLabel() {
+        if (currentStep === 1 && state.service === 'Commercial') {
+          nextBtn.textContent = 'Go to Walkthrough Request';
+        } else if (currentStep === 4) {
+          nextBtn.textContent = 'Request Booking';
+        } else {
+          nextBtn.textContent = 'Continue';
+        }
       }
 
       function renderSizeOptions() {
         const type = state.service || 'ResidentialDeep';
         const container = document.getElementById('size-options');
         container.innerHTML = '';
-        sizeOptionsByType[type].forEach((opt) => {
+        bedroomTiers.forEach((tier) => {
           const div = document.createElement('div');
           div.className = 'qb-opt';
           div.dataset.field = 'size';
-          div.dataset.value = opt.value;
-          div.dataset.base = opt.base;
-          div.textContent = opt.label;
+          div.dataset.value = tier.value;
+          div.dataset.hours = tier.hours[type];
+          div.textContent = tier.label;
           container.appendChild(div);
         });
         attachOptionHandlers(container);
@@ -123,8 +146,7 @@ export default function SiteScripts() {
       }
 
       function updateEstimate() {
-        const base = state.base || 150;
-        const total = Math.round(base * (state.mult || 1));
+        const total = Math.round(state.hours * HOURLY_RATE * (state.mult || 1));
         document.getElementById('estimate-amt').textContent = '$' + total;
       }
 
@@ -139,7 +161,7 @@ export default function SiteScripts() {
         });
         currentStep = n;
         backBtn.style.visibility = n === 1 ? 'hidden' : 'visible';
-        nextBtn.textContent = n === 4 ? 'Request Booking' : 'Continue';
+        updateNextLabel();
         nextBtn.disabled = !isStepValid(n);
         if (n === 4) updateEstimate();
         if (n === 'confirm') {
@@ -152,6 +174,11 @@ export default function SiteScripts() {
 
       const onNext = () => {
         if (currentStep === 1) {
+          if (state.service === 'Commercial') {
+            const walkthrough = document.getElementById('walkthrough');
+            if (walkthrough) walkthrough.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return;
+          }
           renderSizeOptions();
           goToStep(2);
           return;
@@ -169,7 +196,21 @@ export default function SiteScripts() {
           document.getElementById('confirm-name').textContent = name || 'there';
           document.getElementById('confirm-details').textContent =
             (serviceLabels[state.service] || '') + ' ' + (state.frequency || '').toLowerCase() + ' cleaning';
-          goToStep('confirm');
+
+          // Populate hidden fields with the JS-tracked selections, then submit
+          document.getElementById('hidden-service').value = serviceLabels[state.service] || state.service || '';
+          document.getElementById('hidden-size').value = state.size || '';
+          document.getElementById('hidden-frequency').value = state.frequency || '';
+          document.getElementById('hidden-price').value = document.getElementById('estimate-amt').textContent || '';
+
+          nextBtn.disabled = true;
+          const quoteForm = document.getElementById('quote-form');
+          submitToNetlify(quoteForm)
+            .catch((err) => console.error('Quote form submission failed:', err))
+            .finally(() => {
+              nextBtn.disabled = false;
+              goToStep('confirm');
+            });
         }
       };
       const onBack = () => {
@@ -192,9 +233,16 @@ export default function SiteScripts() {
     const walkthroughBtn = document.getElementById('walkthrough-submit');
     const onWalkthroughSubmit = () => {
       const name = document.getElementById('w-name').value.trim();
-      document.getElementById('walkthrough-confirm-name').textContent = name || 'there';
-      document.getElementById('walkthrough-form').style.display = 'none';
-      document.getElementById('walkthrough-confirm').style.display = 'block';
+      const walkthroughForm = document.getElementById('walkthrough-form-tag');
+      walkthroughBtn.disabled = true;
+      submitToNetlify(walkthroughForm)
+        .catch((err) => console.error('Walkthrough form submission failed:', err))
+        .finally(() => {
+          walkthroughBtn.disabled = false;
+          document.getElementById('walkthrough-confirm-name').textContent = name || 'there';
+          document.getElementById('walkthrough-form').style.display = 'none';
+          document.getElementById('walkthrough-confirm').style.display = 'block';
+        });
     };
     if (walkthroughBtn) walkthroughBtn.addEventListener('click', onWalkthroughSubmit);
 

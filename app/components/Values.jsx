@@ -26,7 +26,7 @@ export default function Values() {
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 10-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg>
             </div>
             <h3>Why Choose Us</h3>
-            <p>We hire rockstar cleaners — people we can count on to show up, do the job right, and be reliable and dependable every time. Whenever possible, we send the same cleaner or team to your space each visit, so you always know who's coming. Affordable prices and a dedicated team leave your space sparkling and worry-free.</p>
+            <p>We hire rockstar cleaners — people that you can count on to show up, do the job right, and be reliable and dependable every time. Whenever possible, we send the same cleaner or team to your space each visit, so you always know who's coming. A dedicated team leaves your space sparkling and worry-free.</p>
           </div>
         </div>
       </div>

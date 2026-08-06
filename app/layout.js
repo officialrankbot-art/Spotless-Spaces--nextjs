@@ -5,14 +5,16 @@ const siteUrl = "https://www.spotlessspaces-cleaning.com";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Spotless Spaces | Residential & Commercial Cleaning in Minnesota",
+    default: "Spotless Spaces | Residential & Commercial Cleaning in Austin, TX & Saint Paul, MN",
     template: "%s | Spotless Spaces",
   },
   description:
-    "Spotless Spaces provides trusted, insured residential and commercial cleaning across Minnesota. Get an instant quote and book online in minutes.",
+    "Spotless Spaces provides trusted, insured residential and commercial cleaning in Austin, TX and Saint Paul, MN. Get an instant quote and book online in minutes.",
   keywords: [
-    "house cleaning Minnesota",
-    "commercial cleaning Minnesota",
+    "house cleaning Austin TX",
+    "house cleaning Saint Paul MN",
+    "commercial cleaning Austin TX",
+    "commercial cleaning Saint Paul MN",
     "move in move out cleaning",
     "deep cleaning service",
     "residential cleaning company",
@@ -26,9 +28,9 @@ export const metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Spotless Spaces",
-    title: "Spotless Spaces | Residential & Commercial Cleaning in Minnesota",
+    title: "Spotless Spaces | Residential & Commercial Cleaning in Austin, TX & Saint Paul, MN",
     description:
-      "Trusted, insured residential and commercial cleaning across Minnesota. Get an instant quote and book online in minutes.",
+      "Trusted, insured residential and commercial cleaning in Austin, TX and Saint Paul, MN. Get an instant quote and book online in minutes.",
     locale: "en_US",
     images: [
       {
@@ -41,9 +43,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Spotless Spaces | Residential & Commercial Cleaning in Minnesota",
+    title: "Spotless Spaces | Residential & Commercial Cleaning in Austin, TX & Saint Paul, MN",
     description:
-      "Trusted, insured residential and commercial cleaning across Minnesota. Get an instant quote and book online in minutes.",
+      "Trusted, insured residential and commercial cleaning in Austin, TX and Saint Paul, MN. Get an instant quote and book online in minutes.",
     images: ["/logo.jpg"],
   },
   robots: {
@@ -61,16 +63,15 @@ const jsonLd = {
   "@type": "HomeAndConstructionBusiness",
   name: "Spotless Spaces",
   description:
-    "Trusted, insured residential and commercial cleaning across Minnesota. Deep cleaning, move-in/move-out cleaning, and commercial cleaning contracts.",
+    "Trusted, insured residential and commercial cleaning in Austin, TX and Saint Paul, MN. Deep cleaning, move-in/move-out cleaning, and commercial cleaning contracts.",
   url: siteUrl,
   telephone: "+16122604646",
   email: "info@spotlessspaces-cleaning.com",
   address: {
     "@type": "PostalAddress",
-    addressRegion: "MN",
     addressCountry: "US",
   },
-  areaServed: "Minnesota",
+  areaServed: ["Austin, TX", "Saint Paul, MN"],
   priceRange: "$150 - $$$",
   openingHoursSpecification: [
     {

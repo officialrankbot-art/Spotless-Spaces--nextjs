@@ -4,10 +4,10 @@ export default function Hero() {
       <div className="wrap">
         <div className="hero-grid">
           <div>
-            <p style={{color: 'var(--gold-500)', fontFamily: 'Fredoka,sans-serif', fontWeight: '700', fontSize: '1.15rem', letterSpacing: '.02em', margin: '0 0 10px'}}>Serving Minnesota</p>
+            <p style={{color: 'var(--gold-500)', fontFamily: 'Fredoka,sans-serif', fontWeight: '700', fontSize: '1.15rem', letterSpacing: '.02em', margin: '0 0 10px'}}>Serving Austin, TX &amp; Saint Paul, MN</p>
             <span className="eyebrow">Residential &amp; Commercial Cleaning Services</span>
             <h1>Spotless Spaces.<br/><em>Stress-free living.</em></h1>
-            <p className="lead">Vetted, insured cleaning teams for homes and businesses across Minnesota. Tell us about your space, get an instant estimate, and book online in under two minutes.</p>
+            <p className="lead">Vetted, insured cleaning teams for homes and businesses in Austin, TX and Saint Paul, MN. Tell us about your space, get an instant estimate, and book online in under two minutes.</p>
             <div className="hero-cta">
               <a href="#quote" className="btn btn-gold">Get an Instant Quote</a>
               <a href="tel:+16122604646" className="btn btn-outline">Call 612-260-4646</a>

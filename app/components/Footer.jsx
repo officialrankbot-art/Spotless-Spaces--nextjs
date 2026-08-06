@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="foot-grid">
           <div>
             <div className="foot-brand"><img src="/logo.jpg" alt="Spotless Spaces logo"/> Spotless Spaces</div>
-            <p style={{maxWidth: '280px', fontSize: '.9rem'}}>Trusted residential &amp; commercial cleaning across Minnesota. Licensed, insured, and background-checked.</p>
+            <p style={{maxWidth: '280px', fontSize: '.9rem'}}>Trusted residential &amp; commercial cleaning in Austin, TX and Saint Paul, MN. Licensed, insured, and background-checked.</p>
           </div>
           <div>
             <h5>Company</h5>
@@ -21,7 +21,7 @@ export default function Footer() {
             <ul>
               <li>612-260-4646</li>
               <li>info@spotlessspaces-cleaning.com</li>
-              <li>Minnesota</li>
+              <li>Austin, TX &amp; Saint Paul, MN</li>
             </ul>
           </div>
           <div>
@@ -39,6 +39,8 @@ export default function Footer() {
               <li>Woodbury</li>
               <li>Eagan</li>
               <li>Maplewood</li>
+              <li>Round Rock</li>
+              <li>North Austin &amp; Surrounding Areas</li>
             </ul>
           </div>
         </div>

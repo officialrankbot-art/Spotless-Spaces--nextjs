@@ -32,6 +32,10 @@ export default function Difference() {
             </div>
           </div>
         </div>
+        <div className="checklist-note reveal" style={{marginTop: '36px'}}>
+          <div className="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg></div>
+          <p>Because every visit follows the same checklist, the results are consistent and expectations are clear from the start — so clients know exactly what they're getting, and walk away satisfied with a genuinely refreshed space every time.</p>
+        </div>
       </div>
     </section>
   );
