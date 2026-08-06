@@ -42,11 +42,13 @@ export default function SiteScripts() {
       faqHandlers.push([q, handler]);
     });
 
-    // Shared helper: submit a Netlify-detected form via fetch (no page reload)
+    // Shared helper: submit a Netlify-detected form via fetch (no page reload).
+    // Must POST to the static detection file itself (not "/") under the
+    // Next.js Runtime — see public/__forms.html and the migration notes there.
     function submitToNetlify(form) {
       const formData = new FormData(form);
       const body = new URLSearchParams(formData).toString();
-      return fetch('/', {
+      return fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,

@@ -92,7 +92,7 @@ export default function QuoteBuilder() {
               <div className="qb-step" data-step="confirm" style={{display: 'none', textAlign: 'center', padding: '20px 0'}}>
                 <div className="confirm-check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
                 <h3>Request received, <span id="confirm-name">there</span>!</h3>
-                <p style={{color: 'var(--slate)', maxWidth: '400px', margin: '0 auto'}}>A Spotless Spaces coordinator will text or call within one business hour to confirm your <span id="confirm-details">visit</span>.</p>
+                <p style={{color: 'var(--slate)', maxWidth: '400px', margin: '0 auto'}}>A Spotless Spaces coordinator will be in touch shortly to confirm your <span id="confirm-details">visit</span>.</p>
               </div>
 
               <div className="qb-nav" id="qb-nav">

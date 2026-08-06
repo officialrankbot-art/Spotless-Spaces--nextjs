@@ -47,7 +47,7 @@ export default function Walkthrough() {
             <div id="walkthrough-confirm" style={{display: 'none', textAlign: 'center', padding: '20px 0'}}>
               <div className="confirm-check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
               <h3>Request received, <span id="walkthrough-confirm-name">there</span>!</h3>
-              <p style={{color: 'var(--slate)', maxWidth: '400px', margin: '0 auto'}}>A Spotless Spaces coordinator will reach out within one business day to schedule your walkthrough.</p>
+              <p style={{color: 'var(--slate)', maxWidth: '400px', margin: '0 auto'}}>A Spotless Spaces coordinator will be in touch shortly to schedule your walkthrough.</p>
             </div>
           </div>
         </div>
