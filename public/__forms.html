@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Form detection</title></head>
+<body>
+  <!--
+    This page exists only so Netlify's build-time bot can detect our forms.
+    Next.js pages are not written out as static HTML at deploy time (since any
+    page can be revalidated at runtime), so Netlify can't find <form
+    data-netlify> tags inside app/components/QuoteBuilder.jsx or
+    Walkthrough.jsx directly. This plain, unbuilt HTML file fills that gap.
+    Nobody ever sees this page — the real forms live on the actual site and
+    submit to these same form names via fetch().
+    See: https://ntl.fyi/next-runtime-forms-migration
+  -->
+
+  <form name="quote-request" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="quote-request" />
+    <input name="bot-field" />
+    <input name="clean-type" />
+    <input name="home-size" />
+    <input name="frequency" />
+    <input name="estimated-price" />
+    <input name="sqft" />
+    <input name="name" />
+    <input name="contact" />
+    <input name="zip" />
+    <input name="date" />
+  </form>
+
+  <form name="commercial-walkthrough" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="commercial-walkthrough" />
+    <input name="bot-field" />
+    <input name="business" />
+    <input name="name" />
+    <input name="contact" />
+    <input name="sqft" />
+    <input name="address" />
+    <input name="date" />
+    <input name="timeline" />
+    <input name="notes" />
+  </form>
+</body>
+</html>
