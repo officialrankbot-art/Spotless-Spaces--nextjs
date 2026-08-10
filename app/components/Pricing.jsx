@@ -17,7 +17,7 @@ export default function Pricing() {
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Exterior appliances wiped &amp; sanitized</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Baseboards, vents &amp; light fixtures</li>
             </ul>
-            <a href="#quote" className="btn btn-gold" style={{width: '100%'}}>Choose Deep Clean</a>
+            <a href="https://spotlessspaces.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{width: '100%'}}>Choose Deep Clean</a>
             <div className="price-arrow" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </div>
@@ -31,7 +31,7 @@ export default function Pricing() {
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Kitchen &amp; bathroom wipe-down and sanitizing</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Trash removal &amp; surface tidying</li>
             </ul>
-            <a href="#quote" className="btn btn-navy" style={{width: '100%'}}>Choose Standard Clean</a>
+            <a href="https://spotlessspaces.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn btn-navy" style={{width: '100%'}}>Choose Standard Clean</a>
           </div>
           <div className="price-card reveal">
             <h3>Move-In / Move-Out Clean</h3>
@@ -42,7 +42,7 @@ export default function Pricing() {
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Walls &amp; door frames spot-cleaned</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Floors detailed edge-to-edge</li>
             </ul>
-            <a href="#quote" className="btn btn-navy" style={{width: '100%'}}>Choose Move-In / Move-Out</a>
+            <a href="https://spotlessspaces.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn btn-navy" style={{width: '100%'}}>Choose Move-In / Move-Out</a>
           </div>
           <div className="price-card reveal">
             <h3>Commercial Cleaning Service</h3>
