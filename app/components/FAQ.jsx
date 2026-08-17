@@ -47,12 +47,12 @@ export default function FAQ() {
             <div className="faq-q">What is your cancellation policy and rescheduling policy?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
             <div className="faq-a">
               <p><strong>Cancellations:</strong> If you need to cancel an appointment, we require at least 24 hours of notice prior to your scheduled cleaning. If proper notice is not given, you will be billed for 100% of the service total since our team's time has been reserved for you.</p>
-              <p><strong>Rescheduling:</strong> If you need to reschedule your cleaning, you will need to provide 24 hours of notice. Otherwise you will need to pay another deposit to secure a new time with our cleaners.</p>
+              <p><strong>Rescheduling:</strong> If you need to reschedule your cleaning, we require at least 24 hours of notice. If proper notice is not given, a $50 rescheduling fee will apply.</p>
             </div>
           </div>
           <div className="faq-item">
             <div className="faq-q">Do you require a deposit?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-            <div className="faq-a"><p>Upon your booking, a 25% non-refundable deposit is required to secure your appointment. This allows us to hold your scheduled cleaning and assign our resources effectively. Your deposit will be put toward the total cost of your clean.</p></div>
+            <div className="faq-a"><p>Upon booking, we place a hold on your card for the full amount of your service. This ensures sufficient funds are available and secures your appointment. You will only be charged if the service is completed, or if a late cancellation/rescheduling fee applies as outlined above.</p></div>
           </div>
           <div className="faq-item">
             <div className="faq-q">What can I expect on the day of my clean?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
