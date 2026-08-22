@@ -73,13 +73,13 @@ export default function SiteScripts() {
       const nav = document.getElementById('qb-nav');
 
       // Hourly labor rate used for every estimate
-      const HOURLY_RATE = 67.5;
+      const HOURLY_RATE = 70;
 
       // Crew-hour tiers by bedroom/bathroom count, taken from the master pricing
       // guide (mid-point of each range). Square footage is collected separately
       // as a reference sanity-check only — it does not factor into the estimate.
       const bedroomTiers = [
-        { label: 'Studio (1 bath)', value: 'studio', hours: { ResidentialDeep: 2.25, ResidentialStandard: 1.25, ResidentialMove: 2.75 } },
+        { label: 'Studio (1 bath)', value: 'studio', hours: { ResidentialDeep: 2, ResidentialStandard: 1.5, ResidentialMove: 3 } },
         { label: '1 Bed / 1 Bath', value: '1bed', hours: { ResidentialDeep: 2.75, ResidentialStandard: 1.75, ResidentialMove: 3.25 } },
         { label: '2 Bed / 1 Bath', value: '2bed', hours: { ResidentialDeep: 3.5, ResidentialStandard: 2.25, ResidentialMove: 4.25 } },
         { label: '3 Bed / 2 Bath', value: '3bed', hours: { ResidentialDeep: 4.5, ResidentialStandard: 3, ResidentialMove: 5.5 } },
