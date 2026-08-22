@@ -3,7 +3,9 @@ export default function Header() {
     <header>
       <div className="wrap">
         <nav>
-          <a href="#top" className="brand"><img src="/logo.jpg" alt="Spotless Spaces logo"/> Spotless Spaces</a>
+          <a href="#top" className="brand">
+            <img src="/logo.jpg" alt="Spotless Spaces logo"/> Spotless Spaces
+          </a>
           <div className="navlinks">
             <a href="#values">Values</a>
             <a href="#types-of-clean">Services</a>
@@ -31,7 +33,7 @@ export default function Header() {
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
         <a href="#careers">Careers</a>
-        <span className="mnav-phone">612-260-4646</span>
+        <span className="mnav-phone">267-662-1878</span>
         <a href="https://spotlessspaces.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn btn-navy">Book Now</a>
       </div>
     </header>
