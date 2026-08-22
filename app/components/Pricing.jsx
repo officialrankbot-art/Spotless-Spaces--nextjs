@@ -10,7 +10,7 @@ export default function Pricing() {
         <div className="pricing-grid">
           <div className="price-card featured reveal" style={{position: 'relative'}}>
             <h3>Deep Clean</h3>
-            <div className="amount"><span>Starting At&nbsp;</span>$180</div>
+            <div className="amount"><span>Starting At&nbsp;</span>$140</div>
             <p style={{color: 'var(--slate)', fontSize: '.88rem', margin: '-12px 0 20px'}}>We recommend every new client start here — it resets the whole space before switching to easier, more affordable Standard Cleans for upkeep.</p>
             <ul>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dusting, vacuuming &amp; mopping</li>
@@ -24,7 +24,7 @@ export default function Pricing() {
           </div>
           <div className="price-card reveal">
             <h3>Standard Clean</h3>
-            <div className="amount"><span>Starting At&nbsp;</span>$135</div>
+            <div className="amount"><span>Starting At&nbsp;</span>$105</div>
             <p style={{color: 'var(--slate)', fontSize: '.88rem', margin: '-12px 0 20px'}}>Recurring — weekly, bi-weekly, or monthly. Our go-to for traditional ongoing maintenance once your first Deep Clean is done.</p>
             <ul>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dusting, vacuuming &amp; mopping of main living areas</li>
