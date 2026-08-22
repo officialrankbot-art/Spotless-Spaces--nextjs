@@ -55,18 +55,4 @@ export default function FAQ() {
             <div className="faq-a"><p>Upon booking, we place a hold on your card for the full amount of your service. This ensures sufficient funds are available and secures your appointment. You will only be charged if the service is completed, or if a late cancellation/rescheduling fee applies as outlined above.</p></div>
           </div>
           <div className="faq-item">
-            <div className="faq-q">What can I expect on the day of my clean?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-            <div className="faq-a">
-              <p>We keep you in the loop the whole way through with automated text reminders — we'll reach out 48 hours before your appointment, again when your cleaner is on the way, and once more upon completion with photos of the finished work.</p>
-              <p>Need to adjust anything? Just reach out to us at <a href="tel:+16122604646" style={{color: 'var(--sky-600)', fontWeight: '700'}}>612-260-4646</a> or <a href="mailto:info@spotlessspaces-cleaning.com" style={{color: 'var(--sky-600)', fontWeight: '700'}}>info@spotlessspaces-cleaning.com</a>.</p>
-            </div>
-          </div>
-          <div className="faq-item">
-            <div className="faq-q">Do you clean commercial spaces?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-            <div className="faq-a"><p>Yes we do! First ask that you complete a <a href="#walkthrough" style={{color: 'var(--sky-600)', fontWeight: '700'}}>walk through form</a> so we can better understand your cleaning needs and provide an accurate quote.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+            <div className="faq-q">What can I expect on the day of my clean?<svg
