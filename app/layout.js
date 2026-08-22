@@ -5,16 +5,22 @@ const siteUrl = "https://www.spotlessspaces-cleaning.com";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Spotless Spaces | Residential & Commercial Cleaning in Austin, TX & Saint Paul, MN",
+    default: "Spotless Spaces | Residential & Commercial Cleaning in Montgomery & Bucks County, PA",
     template: "%s | Spotless Spaces",
   },
   description:
-    "Spotless Spaces provides trusted, insured residential and commercial cleaning in Austin, TX and Saint Paul, MN. Get an instant quote and book online in minutes.",
+    "Spotless Spaces provides trusted, insured residential and commercial cleaning in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Get an instant quote and book online in minutes.",
   keywords: [
-    "house cleaning Austin TX",
-    "house cleaning Saint Paul MN",
-    "commercial cleaning Austin TX",
-    "commercial cleaning Saint Paul MN",
+    "house cleaning Montgomery County PA",
+    "house cleaning Bucks County PA",
+    "house cleaning Main Line PA",
+    "house cleaning Ambler PA",
+    "house cleaning Blue Bell PA",
+    "house cleaning Gwynedd PA",
+    "house cleaning Horsham PA",
+    "house cleaning Plymouth Meeting PA",
+    "commercial cleaning Montgomery County PA",
+    "commercial cleaning Bucks County PA",
     "move in move out cleaning",
     "deep cleaning service",
     "residential cleaning company",
@@ -28,9 +34,9 @@ export const metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Spotless Spaces",
-    title: "Spotless Spaces | Residential & Commercial Cleaning in Austin, TX & Saint Paul, MN",
+    title: "Spotless Spaces | Residential & Commercial Cleaning in Montgomery & Bucks County, PA",
     description:
-      "Trusted, insured residential and commercial cleaning in Austin, TX and Saint Paul, MN. Get an instant quote and book online in minutes.",
+      "Trusted, insured residential and commercial cleaning in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Get an instant quote and book online in minutes.",
     locale: "en_US",
     images: [
       {
@@ -43,9 +49,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Spotless Spaces | Residential & Commercial Cleaning in Austin, TX & Saint Paul, MN",
+    title: "Spotless Spaces | Residential & Commercial Cleaning in Montgomery & Bucks County, PA",
     description:
-      "Trusted, insured residential and commercial cleaning in Austin, TX and Saint Paul, MN. Get an instant quote and book online in minutes.",
+      "Trusted, insured residential and commercial cleaning in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Get an instant quote and book online in minutes.",
     images: ["/logo.jpg"],
   },
   robots: {
@@ -63,15 +69,29 @@ const jsonLd = {
   "@type": "HomeAndConstructionBusiness",
   name: "Spotless Spaces",
   description:
-    "Trusted, insured residential and commercial cleaning in Austin, TX and Saint Paul, MN. Deep cleaning, move-in/move-out cleaning, and commercial cleaning contracts.",
+    "Trusted, insured residential and commercial cleaning in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Deep cleaning, move-in/move-out cleaning, and commercial cleaning contracts.",
   url: siteUrl,
-  telephone: "+16122604646",
+  telephone: "+12676621878",
   email: "info@spotlessspaces-cleaning.com",
   address: {
     "@type": "PostalAddress",
+    addressLocality: "North Wales",
+    addressRegion: "PA",
     addressCountry: "US",
   },
-  areaServed: ["Austin, TX", "Saint Paul, MN"],
+  areaServed: [
+    "North Wales, PA",
+    "Ambler, PA",
+    "Blue Bell, PA",
+    "Gwynedd, PA",
+    "Gwynedd Valley, PA",
+    "Horsham, PA",
+    "Plymouth Meeting, PA",
+    "Fort Washington, PA",
+    "Main Line, PA",
+    "Montgomery County, PA",
+    "Bucks County, PA",
+  ],
   priceRange: "$150 - $$$",
   openingHoursSpecification: [
     {
@@ -102,6 +122,3 @@ export default function RootLayout({ children }) {
         {children}
         <script src="//code.tidio.co/e2oyht9rhdaure2n1j1zfxqzciypichk.js" async></script>
       </body>
-    </html>
-  );
-}
