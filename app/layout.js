@@ -122,3 +122,6 @@ export default function RootLayout({ children }) {
         {children}
         <script src="//code.tidio.co/e2oyht9rhdaure2n1j1zfxqzciypichk.js" async></script>
       </body>
+    </html>
+  );
+}
