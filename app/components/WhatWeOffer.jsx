@@ -12,7 +12,7 @@ export default function WhatWeOffer() {
             <span className="tag tag-residential">Residential</span>
             <h3>One Time &amp; Recurring Deep Cleaning</h3>
             <p style={{color: 'var(--slate)'}}>A thorough, top-to-bottom clean for houses, apartments, and condos — available one-time or on a recurring schedule.</p>
-            <div className="price-tag"><span>Starting At&nbsp;</span>$180<span>&nbsp;per visit</span></div>
+            <div className="price-tag"><span>Starting At&nbsp;</span>$140<span>&nbsp;per visit</span></div>
           </div>
           <div className="service-card reveal">
             <span className="tag tag-residential">Residential</span>
