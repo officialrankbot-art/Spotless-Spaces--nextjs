@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="foot-grid">
           <div>
             <div className="foot-brand"><img src="/logo.jpg" alt="Spotless Spaces logo"/> Spotless Spaces</div>
-            <p style={{maxWidth: '280px', fontSize: '.9rem'}}>Trusted residential &amp; commercial cleaning in Austin, TX and Saint Paul, MN. Licensed, insured, and background-checked.</p>
+            <p style={{maxWidth: '280px', fontSize: '.9rem'}}>Trusted residential &amp; commercial cleaning in Montgomery County, Bucks County, and the Main Line, PA. Licensed, insured, and background-checked.</p>
           </div>
           <div>
             <h5>Company</h5>
@@ -19,9 +19,9 @@ export default function Footer() {
           <div>
             <h5>Contact</h5>
             <ul>
-              <li>612-260-4646</li>
+              <li>267-662-1878</li>
               <li>info@spotlessspaces-cleaning.com</li>
-              <li>Austin, TX &amp; Saint Paul, MN</li>
+              <li>North Wales, PA</li>
             </ul>
           </div>
           <div>
@@ -35,12 +35,16 @@ export default function Footer() {
           <div>
             <h5>Service Areas</h5>
             <ul>
-              <li>St. Paul</li>
-              <li>Woodbury</li>
-              <li>Eagan</li>
-              <li>Maplewood</li>
-              <li>Round Rock</li>
-              <li>North Austin &amp; Surrounding Areas</li>
+              <li>North Wales</li>
+              <li>Ambler</li>
+              <li>Blue Bell</li>
+              <li>Gwynedd / Gwynedd Valley</li>
+              <li>Horsham</li>
+              <li>Plymouth Meeting</li>
+              <li>Fort Washington</li>
+              <li>The Main Line</li>
+              <li>Montgomery County</li>
+              <li>Bucks County &amp; Surrounding Areas</li>
             </ul>
           </div>
         </div>
