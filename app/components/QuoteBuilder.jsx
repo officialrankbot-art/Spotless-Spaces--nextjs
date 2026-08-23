@@ -63,10 +63,21 @@ export default function QuoteBuilder() {
               <div className="qb-step" data-step="3" style={{display: 'none'}}>
                 <div className="qb-label">Step 3 of 4 — How Often?</div>
                 <div className="qb-options cols-4">
-                  <div className="qb-opt" data-field="frequency" data-value="One-time" data-mult="1">One-time</div>
-                  <div className="qb-opt" data-field="frequency" data-value="Weekly" data-mult="1">Weekly</div>
-                  <div className="qb-opt" data-field="frequency" data-value="Bi-weekly" data-mult="1">Bi-weekly</div>
-                  <div className="qb-opt" data-field="frequency" data-value="Monthly" data-mult="1">Monthly</div>
+                  <div className="qb-opt" data-field="frequency" data-value="One-time" data-mult="1">
+                    One-time
+                  </div>
+                  <div className="qb-opt" data-field="frequency" data-value="Weekly" data-mult="0.85">
+                    Weekly
+                    <span className="qb-save-badge">Save 15%</span>
+                  </div>
+                  <div className="qb-opt" data-field="frequency" data-value="Bi-weekly" data-mult="0.9">
+                    Bi-weekly
+                    <span className="qb-save-badge">Save 10%</span>
+                  </div>
+                  <div className="qb-opt" data-field="frequency" data-value="Monthly" data-mult="0.9">
+                    Monthly
+                    <span className="qb-save-badge">Save 10%</span>
+                  </div>
                 </div>
               </div>
 
@@ -105,4 +116,11 @@ export default function QuoteBuilder() {
       </div>
     </section>
   );
+}
+.qb-save-badge {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--sage, #4a7c59);
+  font-weight: 600;
+  margin-top: 4px;
 }
