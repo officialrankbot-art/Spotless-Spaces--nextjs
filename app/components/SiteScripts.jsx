@@ -75,17 +75,26 @@ export default function SiteScripts() {
       // Hourly labor rate used for every estimate
       const HOURLY_RATE = 70;
 
-      // Crew-hour tiers by bedroom/bathroom count, taken from the master pricing
-      // guide (mid-point of each range). Square footage is collected separately
-      // as a reference sanity-check only — it does not factor into the estimate.
+      // Crew-time tiers by bedroom/bathroom count. These are pulled straight
+      // from the BookingKoala master pricing guide (in minutes, so we never
+      // lose precision on the odd durations like 4hr20min or 5hr5min), so the
+      // website estimate matches the BookingKoala job price exactly at the
+      // labor level. Square footage is collected separately as a reference
+      // sanity-check only — it does not factor into the estimate.
       const bedroomTiers = [
-        { label: 'Studio (1 bath)', value: 'studio', hours: { ResidentialDeep: 2, ResidentialStandard: 1.5, ResidentialMove: 3 } },
-        { label: '1 Bed / 1 Bath', value: '1bed', hours: { ResidentialDeep: 2.75, ResidentialStandard: 1.75, ResidentialMove: 3.25 } },
-        { label: '2 Bed / 1 Bath', value: '2bed', hours: { ResidentialDeep: 3.5, ResidentialStandard: 2.25, ResidentialMove: 4.25 } },
-        { label: '3 Bed / 2 Bath', value: '3bed', hours: { ResidentialDeep: 4.5, ResidentialStandard: 3, ResidentialMove: 5.5 } },
-        { label: '4 Bed / 2–3 Bath', value: '4bed', hours: { ResidentialDeep: 6, ResidentialStandard: 4, ResidentialMove: 7.25 } },
-        { label: '5+ Bed / 3+ Bath', value: '5bed', hours: { ResidentialDeep: 8, ResidentialStandard: 5.25, ResidentialMove: 9.75 } },
-        { label: '6+ Bed / 4+ Bath', value: '6bed', hours: { ResidentialDeep: 10.5, ResidentialStandard: 7, ResidentialMove: 13 } },
+        { label: 'Studio / 1 Bath', value: 'studio-1ba', minutes: { ResidentialDeep: 150, ResidentialStandard: 90, ResidentialMove: 180 } },
+        { label: '1 Bed / 1 Bath', value: '1bed-1ba', minutes: { ResidentialDeep: 180, ResidentialStandard: 120, ResidentialMove: 195 } },
+        { label: '2 Bed / 1 Bath', value: '2bed-1ba', minutes: { ResidentialDeep: 210, ResidentialStandard: 150, ResidentialMove: 255 } },
+        { label: '2 Bed / 1.5 Bath', value: '2bed-1.5ba', minutes: { ResidentialDeep: 230, ResidentialStandard: 165, ResidentialMove: 285 } },
+        { label: '2 Bed / 2 Bath', value: '2bed-2ba', minutes: { ResidentialDeep: 240, ResidentialStandard: 180, ResidentialMove: 305 } },
+        { label: '3 Bed / 1 Bath', value: '3bed-1ba', minutes: { ResidentialDeep: 255, ResidentialStandard: 195, ResidentialMove: 315 } },
+        { label: '3 Bed / 2 Bath', value: '3bed-2ba', minutes: { ResidentialDeep: 300, ResidentialStandard: 210, ResidentialMove: 345 } },
+        { label: '3 Bed / 2.5 Bath', value: '3bed-2.5ba', minutes: { ResidentialDeep: 315, ResidentialStandard: 240, ResidentialMove: 375 } },
+        { label: '4 Bed / 2 Bath', value: '4bed-2ba', minutes: { ResidentialDeep: 375, ResidentialStandard: 240, ResidentialMove: 405 } },
+        { label: '4 Bed / 2.5 Bath', value: '4bed-2.5ba', minutes: { ResidentialDeep: 390, ResidentialStandard: 260, ResidentialMove: 435 } },
+        { label: '4 Bed / 3 Bath', value: '4bed-3ba', minutes: { ResidentialDeep: 420, ResidentialStandard: 285, ResidentialMove: 480 } },
+        { label: '5+ Bed / 3+ Bath', value: '5bed-3ba', minutes: { ResidentialDeep: 540, ResidentialStandard: 315, ResidentialMove: 600 } },
+        { label: '6+ Bed / 4+ Bath', value: '6bed-4ba', minutes: { ResidentialDeep: 660, ResidentialStandard: 435, ResidentialMove: 780 } },
       ];
 
       const serviceLabels = {
@@ -130,7 +139,10 @@ export default function SiteScripts() {
           div.className = 'qb-opt';
           div.dataset.field = 'size';
           div.dataset.value = tier.value;
-          div.dataset.hours = tier.hours[type];
+          // Convert stored minutes to hours here so state.hours stays a
+          // plain decimal, same as before — just sourced from minutes so
+          // odd durations (e.g. 4hr20min) don't get rounded off.
+          div.dataset.hours = tier.minutes[type] / 60;
           div.textContent = tier.label;
           container.appendChild(div);
         });
