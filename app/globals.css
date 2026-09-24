@@ -116,8 +116,9 @@
   @media(max-width:900px){ .hero-grid{grid-template-columns:1fr;} }
   .hero .eyebrow{color:#fff;}
   .hero .eyebrow::before{background:var(--gold-500);}
-  .hero h1{color:#fff;font-size:clamp(2.4rem, 4.6vw, 3.6rem);line-height:1.06;}
-  .hero h1 em{color:var(--gold-500);font-style:normal;font-weight:600;}
+  .hero .hero-title{font-family:'Fredoka', sans-serif;font-weight:600;letter-spacing:-0.01em;margin:0 0 .4em;color:#fff;font-size:clamp(2.4rem, 4.6vw, 3.6rem);line-height:1.06;}
+  .hero .hero-title em{color:var(--gold-500);font-style:normal;font-weight:600;}
+  .hero h1.hero-kicker{color:var(--gold-500);font-family:'Fredoka', sans-serif;font-weight:700;font-size:1.15rem;line-height:1.35;letter-spacing:.02em;margin:0 0 14px;}
   .hero p.lead{color:rgba(255,255,255,.78);font-size:1.08rem;max-width:480px;margin-bottom:34px;}
   .hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:52px;}
   .hero-badges{display:flex;gap:28px;flex-wrap:wrap;padding:22px 0 44px;border-top:1px solid rgba(255,255,255,.14);}

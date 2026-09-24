@@ -5,10 +5,10 @@ const CHECK = (
 );
 
 const INDUSTRIES = [
-  { tag: "Offices", title: "Offices & Professional Suites", text: "Workstations, conference rooms, lobbies, kitchens, and restrooms.", href: "/commercial-cleaning" },
-  { tag: "Healthcare", title: "Medical & Dental Offices", text: "Waiting rooms, exam and operatory surfaces, and restrooms disinfected on your schedule." },
-  { tag: "Eye care", title: "Optometry & Eye Care Practices", text: "Front desks, frame displays, glass, exam rooms, and high-touch surfaces kept spotless." },
-  { tag: "Fitness", title: "Gyms & Fitness Centers", text: "Workout floors, locker rooms, showers, and restrooms cleaned and sanitized." },
+  { tag: "Offices", title: "Offices & Professional Suites", text: "Workstations, conference rooms, lobbies, kitchens, and restrooms.", href: "/office-cleaning" },
+  { tag: "Healthcare", title: "Medical & Dental Offices", text: "Waiting rooms, exam and operatory surfaces, and restrooms disinfected on your schedule.", href: "/medical-office-cleaning" },
+  { tag: "Eye care", title: "Optometry & Eye Care Practices", text: "Front desks, frame displays, glass, exam rooms, and high-touch surfaces kept spotless.", href: "/optometry-office-cleaning" },
+  { tag: "Fitness", title: "Gyms & Fitness Centers", text: "Workout floors, locker rooms, showers, and restrooms cleaned and sanitized.", href: "/gym-cleaning" },
   { tag: "Child care", title: "Daycares & Child Care Centers", text: "Classrooms, nap rooms, and restrooms cleaned with child-safe products.", href: "/daycare-cleaning" },
   { tag: "Automotive", title: "Car Dealerships", text: "Showrooms, customer lounges, service waiting areas, and offices.", href: "/car-dealership-cleaning" },
   { tag: "Industrial", title: "Warehouses & Light Industrial", text: "Break rooms, restrooms, locker rooms, offices, and floors, around your shifts.", href: "/warehouse-cleaning" },
@@ -28,8 +28,8 @@ export default function CommercialIndustries() {
     <section id="industries">
       <div className="wrap">
         <div className="section-head reveal">
-          <span className="eyebrow">Commercial Cleaning</span>
-          <h2>Cleaning built around your business</h2>
+          <span className="eyebrow">Commercial Cleaning Services</span>
+          <h2>Commercial cleaners for every kind of business</h2>
           <p>
             From medical offices and gyms to dealerships and warehouses, you get one insured, dependable team,
             one written checklist, and one point of contact who picks up the phone. Every contract is quoted by square

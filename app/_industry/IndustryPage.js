@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Walkthrough from "../components/Walkthrough";
 import SiteScripts from "../components/SiteScripts";
 import styles from "./IndustryPage.module.css";
+import { TOWNS, TOWN_ORDER, townSlug } from "../_areas/content";
 import {
   INDUSTRIES,
   INDUSTRY_ORDER,
@@ -182,9 +183,10 @@ export default function IndustryPage({ industry }) {
             including:
           </p>
           <ul className={styles.areas}>
-            {AREAS.map((a) => (
-              <li key={a}>{a}</li>
-            ))}
+            {AREAS.map((a) => {
+              const match = TOWN_ORDER.find((k) => TOWNS[k].name === a);
+              return <li key={a}>{match ? <Link href={`/${townSlug(match)}`}>{a}</Link> : a}</li>;
+            })}
           </ul>
         </section>
 

@@ -8,12 +8,16 @@ export default function Footer() {
             <p style={{maxWidth: '280px', fontSize: '.9rem'}}>Commercial and janitorial cleaning, plus residential service, in Montgomery County, Bucks County, and the Main Line, PA. Licensed and insured.</p>
           </div>
           <div>
-            <h5>Company</h5>
+            <h5>Services</h5>
             <ul>
               <li><a href="/commercial-cleaning">Commercial Cleaning</a></li>
-              <li><a href="/daycare-cleaning">Daycare Cleaning</a></li>
-              <li><a href="/car-dealership-cleaning">Car Dealership Cleaning</a></li>
-              <li><a href="/warehouse-cleaning">Warehouse Cleaning</a></li>
+              <li><a href="/office-cleaning">Office Cleaning</a></li>
+              <li><a href="/medical-office-cleaning">Medical &amp; Dental Offices</a></li>
+              <li><a href="/optometry-office-cleaning">Eye Care Offices</a></li>
+              <li><a href="/gym-cleaning">Gyms &amp; Fitness Centers</a></li>
+              <li><a href="/daycare-cleaning">Daycares</a></li>
+              <li><a href="/car-dealership-cleaning">Car Dealerships</a></li>
+              <li><a href="/warehouse-cleaning">Warehouses</a></li>
               <li><a href="/#residential">Residential Cleaning</a></li>
               <li><a href="/#walkthrough">Free Walkthrough</a></li>
               <li><a href="/#faq">FAQ</a></li>
@@ -38,16 +42,17 @@ export default function Footer() {
           <div>
             <h5>Service Areas</h5>
             <ul>
-              <li>North Wales</li>
-              <li>Ambler</li>
-              <li>Blue Bell</li>
-              <li>Gwynedd / Gwynedd Valley</li>
-              <li>Horsham</li>
-              <li>Plymouth Meeting</li>
-              <li>Fort Washington</li>
+              <li><a href="/commercial-cleaning-north-wales-pa">North Wales</a></li>
+              <li><a href="/commercial-cleaning-ambler-pa">Ambler</a></li>
+              <li><a href="/commercial-cleaning-blue-bell-pa">Blue Bell</a></li>
+              <li><a href="/commercial-cleaning-gwynedd-pa">Gwynedd / Gwynedd Valley</a></li>
+              <li><a href="/commercial-cleaning-horsham-pa">Horsham</a></li>
+              <li><a href="/commercial-cleaning-plymouth-meeting-pa">Plymouth Meeting</a></li>
+              <li><a href="/commercial-cleaning-fort-washington-pa">Fort Washington</a></li>
               <li>The Main Line</li>
               <li>Montgomery County</li>
               <li>Bucks County &amp; Surrounding Areas</li>
+              <li><a href="/service-areas">All service areas</a></li>
             </ul>
           </div>
         </div>

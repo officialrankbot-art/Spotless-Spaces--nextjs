@@ -4,10 +4,9 @@ export default function Hero() {
       <div className="wrap">
         <div className="hero-grid">
           <div>
-            <p style={{color: 'var(--gold-500)', fontFamily: 'Fredoka,sans-serif', fontWeight: '700', fontSize: '1.15rem', letterSpacing: '.02em', margin: '0 0 10px'}}>Serving Montgomery &amp; Bucks County, PA</p>
-            <span className="eyebrow">Commercial &amp; Janitorial Cleaning</span>
-            <h1>Spotless Spaces.<br/><em>Stress-free living.</em></h1>
-            <p className="lead">Insured, reliable cleaning crews for offices, medical and dental practices, fitness centers, daycares, dealerships, warehouses, and more across North Wales, Ambler, Blue Bell, Horsham, Fort Washington, Plymouth Meeting, and the Main Line. Nightly, weekly, or custom schedules, built around your business hours.</p>
+            <h1 className="hero-kicker">Commercial Cleaning in Montgomery &amp; Bucks County, PA</h1>
+            <p className="hero-title">Spotless Spaces.<br/><em>Stress-free living.</em></p>
+            <p className="lead">Insured, reliable commercial cleaners for offices, medical and dental practices, fitness centers, daycares, dealerships, warehouses, and more across North Wales, Ambler, Blue Bell, Horsham, Fort Washington, Plymouth Meeting, and the Main Line. Nightly, weekly, or custom schedules, built around your business hours.</p>
             <div className="hero-cta">
               <a href="#walkthrough" className="btn btn-gold">Request a Free Walkthrough</a>
               <a href="tel:+12676621878" className="btn btn-outline">Call 267-662-1878</a>

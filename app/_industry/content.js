@@ -24,13 +24,13 @@ export const INDUSTRIES = {
     slug: "commercial-cleaning",
     navLabel: "Commercial Cleaning",
     serviceType: "Commercial cleaning",
-    metaTitle: "Commercial Cleaning Services in Montgomery County, PA",
+    metaTitle: "Commercial Cleaning & Janitorial Services in Montgomery County, PA",
     metaDescription:
-      "Commercial cleaning and janitorial contracts for offices, medical and dental practices, optometrists, gyms, daycares, car dealerships, and warehouses in North Wales, Ambler, Blue Bell, Fort Washington, and Philadelphia. Licensed and insured crews. Free walkthrough.",
+      "Commercial and janitorial cleaning for offices, medical practices, gyms, daycares, and warehouses in Montgomery County, PA. Insured crews. Free walkthrough.",
     eyebrow: "Commercial & Janitorial Cleaning",
-    h1: "Commercial Cleaning in Montgomery County, PA",
+    h1: "Commercial Cleaning & Janitorial Services in Montgomery County, PA",
     intro:
-      "Nightly, weekly, and custom-schedule cleaning contracts for businesses across Montgomery County and the Philadelphia suburbs. One insured team, one checklist, and one account manager who actually picks up the phone.",
+      "Looking for reliable commercial cleaners near you? We provide nightly, weekly, and custom-schedule cleaning contracts for businesses across Montgomery County and the Philadelphia suburbs. One insured team, one checklist, and one account manager who actually picks up the phone.",
     highlights: [
       { title: "Licensed & insured", text: "Certificate of insurance available on request, and we can name your company as additional insured." },
       { title: "Background checks on request", text: "If your building or policy requires it, we can provide background checks for the team assigned to your site." },
@@ -44,11 +44,11 @@ export const INDUSTRIES = {
       { title: "Daycares & child care centers", text: "Classroom, nap room, restroom, and kitchen cleaning with child-safe products and high-touch disinfecting.", href: "/daycare-cleaning" },
       { title: "Car dealerships", text: "Showroom floors, glass, customer lounges, restrooms, service waiting areas, and offices.", href: "/car-dealership-cleaning" },
       { title: "Warehouses & light industrial", text: "Office areas, break rooms, restrooms, locker rooms, and floor sweeping for distribution and light industrial sites.", href: "/warehouse-cleaning" },
-      { title: "Offices & professional suites", text: "Workstations, conference rooms, lobbies, kitchens, and restrooms on a nightly or weekly schedule." },
+      { title: "Offices & professional suites", text: "Workstations, conference rooms, lobbies, kitchens, and restrooms on a nightly or weekly schedule.", href: "/office-cleaning" },
       { title: "Retail & showrooms", text: "Sales floors, fitting rooms, entryways, and glass kept customer-ready." },
-      { title: "Medical & dental offices", text: "Waiting rooms, exam rooms, operatories, and restrooms cleaned and disinfected on your schedule." },
-      { title: "Optometry & eye care practices", text: "Front desks, frame displays, glass, exam rooms, and high-touch surfaces kept spotless." },
-      { title: "Gyms & fitness centers", text: "Workout floors, locker rooms, showers, and restrooms cleaned and sanitized around your class schedule." },
+      { title: "Medical & dental offices", text: "Waiting rooms, exam rooms, operatories, and restrooms cleaned and disinfected on your schedule.", href: "/medical-office-cleaning" },
+      { title: "Optometry & eye care practices", text: "Front desks, frame displays, glass, exam rooms, and high-touch surfaces kept spotless.", href: "/optometry-office-cleaning" },
+      { title: "Gyms & fitness centers", text: "Workout floors, locker rooms, showers, and restrooms cleaned and sanitized around your class schedule.", href: "/gym-cleaning" },
     ],
     faqs: [
       { q: "How do you price commercial cleaning?", a: "Pricing is based on square footage, how often you need service, the type of facility, and the scope of work. We start with a free walkthrough (on-site or virtual) and give you a written quote with a clear checklist, so you know exactly what's included." },
@@ -65,7 +65,7 @@ export const INDUSTRIES = {
     serviceType: "Daycare and child care center cleaning",
     metaTitle: "Daycare & Child Care Center Cleaning in Montgomery County, PA",
     metaDescription:
-      "Daycare and child care center cleaning in North Wales, Ambler, Blue Bell, Fort Washington, and Philadelphia. Child-safe products, high-touch disinfecting, consistent crews, and multi-location contracts.",
+      "Daycare and child care center cleaning in North Wales, Ambler, Blue Bell & Montgomery County, PA. Child-safe products, after hours. Free walkthrough.",
     eyebrow: "Daycare & Child Care Cleaning",
     h1: "Daycare & Child Care Center Cleaning in Montgomery County, PA",
     intro:
@@ -102,7 +102,7 @@ export const INDUSTRIES = {
     serviceType: "Car dealership cleaning",
     metaTitle: "Car Dealership Cleaning Services in Montgomery County, PA",
     metaDescription:
-      "Showroom, customer lounge, service area, and office cleaning for car dealerships in Fort Washington, North Wales, Blue Bell, Horsham, and the Philadelphia area. Insured crews, after-hours service.",
+      "Car dealership cleaning in Montgomery County, PA: showrooms, customer lounges, service areas, and offices kept customer-ready. Free walkthrough.",
     eyebrow: "Car Dealership Cleaning",
     h1: "Car Dealership Cleaning in Montgomery County, PA",
     intro:
@@ -138,7 +138,7 @@ export const INDUSTRIES = {
     serviceType: "Warehouse and light industrial cleaning",
     metaTitle: "Warehouse & Light Industrial Cleaning in Montgomery County, PA",
     metaDescription:
-      "Warehouse, distribution, and light industrial cleaning in Fort Washington, Horsham, North Wales, Plymouth Meeting, and the Philadelphia area. Offices, break rooms, restrooms, locker rooms, and floor care.",
+      "Warehouse and light industrial cleaning in Fort Washington, Horsham & Montgomery County, PA. Break rooms, restrooms, offices, and floors. Free walkthrough.",
     eyebrow: "Warehouse & Light Industrial",
     h1: "Warehouse & Light Industrial Cleaning in Montgomery County, PA",
     intro:
@@ -167,6 +167,152 @@ export const INDUSTRIES = {
       { q: "How is warehouse cleaning priced?", a: "Pricing depends on the areas included, square footage, and service frequency. We start with a free walkthrough and give you a written quote." },
     ],
   },
+
+  medical: {
+    slug: "medical-office-cleaning",
+    navLabel: "Medical & Dental Office Cleaning",
+    serviceType: "Medical and dental office cleaning",
+    metaTitle: "Medical & Dental Office Cleaning in Montgomery County, PA",
+    metaDescription:
+      "Medical and dental office cleaning in North Wales, Blue Bell & Montgomery County, PA. After-hours disinfecting of exam rooms and restrooms. Free walkthrough.",
+    eyebrow: "Medical & Dental Office Cleaning",
+    h1: "Medical & Dental Office Cleaning in Montgomery County, PA",
+    intro:
+      "Patients judge your practice the moment they walk in. We clean and disinfect waiting rooms, exam rooms, operatories, and restrooms after hours, following a written checklist, so your office is ready for the first appointment every morning.",
+    highlights: [
+      { title: "After-hours service", text: "We clean after your last patient leaves, so there's no disruption to appointments or staff." },
+      { title: "High-touch disinfecting", text: "Door handles, check-in counters, chair arms, light switches, and restroom fixtures get attention every visit." },
+      { title: "Your protocols, followed", text: "Tell us your office's cleaning and privacy requirements during the walkthrough, and we build them into your checklist." },
+      { title: "The same team every visit", text: "Whenever possible, the same crew services your practice, so they learn your layout and you know who has your keys." },
+      { title: "Licensed & insured", text: "Certificate of insurance on request, with background checks available if you need them." },
+      { title: "Multi-location practices", text: "One agreement, one invoice, and the same checklist at every office." },
+    ],
+    sectionsTitle: "What we clean at your practice",
+    sections: [
+      { title: "Waiting rooms & reception", text: "Seating, check-in counters, glass, magazine areas, and floors cleaned so the first impression is a good one." },
+      { title: "Exam rooms & operatories", text: "Counters, cabinet fronts, chairs, sinks, and floors cleaned and disinfected. We leave clinical equipment and sharps to your staff." },
+      { title: "Restrooms", text: "Toilets, sinks, fixtures, mirrors, and floors cleaned and disinfected, with optional supply restocking." },
+      { title: "Hallways & floors", text: "Hard floors swept and mopped, carpets vacuumed, and periodic floor scrubbing scheduled as needed." },
+      { title: "Staff areas & offices", text: "Break rooms, kitchenettes, desks, and private offices kept clean for your team." },
+      { title: "Trash removal", text: "Regular trash and recycling emptied and relined. Regulated medical waste stays with your licensed disposal provider." },
+    ],
+    faqs: [
+      { q: "Do you clean medical and dental offices after hours?", a: "Yes. Most practices are cleaned in the evening after the last patient leaves, so our team is never working around appointments." },
+      { q: "Do you handle medical waste or sharps?", a: "No. We empty regular trash and recycling. Sharps containers and regulated medical waste should stay with your licensed disposal provider." },
+      { q: "Can you follow our office's cleaning protocols?", a: "Yes. During the free walkthrough, tell us your requirements, preferred products, and any rooms with special instructions, and we'll build them into your written checklist." },
+      { q: "Which areas do you serve?", a: "We serve Montgomery County, including North Wales, Ambler, Blue Bell, Fort Washington, Horsham, Gwynedd, and Plymouth Meeting, plus the Main Line and surrounding areas." },
+      { q: "How much does medical office cleaning cost?", a: "It depends on square footage, the number of exam rooms and restrooms, and how many nights per week you need service. We start with a free walkthrough and send a written quote." },
+    ],
+  },
+
+  eyecare: {
+    slug: "optometry-office-cleaning",
+    navLabel: "Optometry & Eye Care Office Cleaning",
+    serviceType: "Optometry and eye care office cleaning",
+    metaTitle: "Optometry & Eye Care Office Cleaning in Montgomery County, PA",
+    metaDescription:
+      "Optometry and eye care office cleaning in Montgomery County, PA. Streak-free glass, frame displays, exam rooms, and restrooms. Free walkthrough.",
+    eyebrow: "Optometry & Eye Care Cleaning",
+    h1: "Optometry & Eye Care Office Cleaning in Montgomery County, PA",
+    intro:
+      "An eye care office runs on first impressions: clear glass, dust-free frame displays, and clean exam rooms. We clean your practice after hours on a set schedule, so patients and staff walk into a bright, clean office every day.",
+    highlights: [
+      { title: "Glass & display care", text: "Entry doors, mirrors, display cases, and shelving cleaned streak-free. We dust around frames without rearranging your displays." },
+      { title: "High-touch disinfecting", text: "Check-in counters, chair arms, door handles, and restroom fixtures get attention every visit." },
+      { title: "After-hours service", text: "We work after closing, so cleaning never interrupts exams or fittings." },
+      { title: "Careful around equipment", text: "We clean floors and surfaces around exam equipment and leave the instruments themselves to your staff." },
+      { title: "The same team every visit", text: "Whenever possible, the same crew services your office, so they learn your layout and routines." },
+      { title: "Licensed & insured", text: "Certificate of insurance on request, with background checks available if you need them." },
+    ],
+    sectionsTitle: "What we clean at your practice",
+    sections: [
+      { title: "Showroom & frame displays", text: "Display shelving, mirrors, glass cases, and counters dusted and cleaned so frames show at their best." },
+      { title: "Reception & waiting area", text: "Seating, check-in desk, glass, and floors cleaned for the first impression patients see." },
+      { title: "Exam & pre-test rooms", text: "Counters, chairs, door handles, sinks, and floors cleaned and disinfected." },
+      { title: "Restrooms", text: "Toilets, sinks, fixtures, mirrors, and floors cleaned and disinfected, with optional supply restocking." },
+      { title: "Optical lab & back office", text: "Work surfaces, desks, and floors cleaned in the areas you want us in." },
+      { title: "Staff break room", text: "Counters, tables, sinks, and exterior appliance surfaces cleaned; trash emptied." },
+    ],
+    faqs: [
+      { q: "Will you move or rearrange our frame displays?", a: "No. We dust and clean around your displays and leave frames where they are. If you'd like displays cleaned more thoroughly, we can schedule it with your staff." },
+      { q: "Do you clean exam equipment?", a: "We clean floors, counters, and high-touch surfaces around your equipment. Instruments and lenses are best left to your staff." },
+      { q: "When do you clean?", a: "After your office closes, on the nights you choose, so we never interrupt exams or fittings." },
+      { q: "How much does it cost to clean an optometry office?", a: "It depends on square footage, how many exam rooms and restrooms you have, and how often you need service. We start with a free walkthrough and send a written quote." },
+    ],
+  },
+
+  fitness: {
+    slug: "gym-cleaning",
+    navLabel: "Gym & Fitness Center Cleaning",
+    serviceType: "Gym and fitness center cleaning",
+    metaTitle: "Gym & Fitness Center Cleaning in Montgomery County, PA",
+    metaDescription:
+      "Gym, studio, and fitness center cleaning in North Wales, Horsham & Montgomery County, PA. Locker rooms, showers, and workout floors. Free walkthrough.",
+    eyebrow: "Gym & Fitness Center Cleaning",
+    h1: "Gym & Fitness Center Cleaning in Montgomery County, PA",
+    intro:
+      "Members notice a dirty locker room faster than anything else. We clean workout floors, locker rooms, showers, and restrooms on a schedule built around your class times and open hours, so your facility looks and smells fresh.",
+    highlights: [
+      { title: "Locker rooms & showers", text: "Showers, benches, lockers, sinks, and floors cleaned and disinfected every visit." },
+      { title: "High-touch disinfecting", text: "Door handles, front desk, water fountains, and restroom fixtures get attention every visit." },
+      { title: "Scheduled around your hours", text: "Overnight, early-morning, or between-class service, depending on when your gym is quietest." },
+      { title: "Floor care", text: "Rubber flooring, hardwood studios, carpet, and hard floors each cleaned the right way." },
+      { title: "The same team every visit", text: "Whenever possible, the same crew services your facility, so they learn your space." },
+      { title: "Licensed & insured", text: "Certificate of insurance on request, with background checks available if you need them." },
+    ],
+    sectionsTitle: "What we clean at your facility",
+    sections: [
+      { title: "Workout floors", text: "Floors vacuumed and mopped, mirrors cleaned, and surfaces wiped down." },
+      { title: "Locker rooms & showers", text: "Showers, benches, lockers, toilets, sinks, and floors cleaned and disinfected." },
+      { title: "Studios", text: "Yoga, cycling, and group fitness rooms cleaned, with floors cared for by surface type." },
+      { title: "Front desk & lobby", text: "Check-in counters, seating, glass doors, and entry mats cleaned for a strong first impression." },
+      { title: "Restrooms", text: "Full clean and disinfect, with optional supply restocking." },
+      { title: "Offices & staff areas", text: "Desks, break areas, and trash handled so your team's space stays clean too." },
+    ],
+    faqs: [
+      { q: "Do you clean gym equipment?", a: "We can wipe down equipment surfaces as part of your checklist. Tell us during the walkthrough which machines and areas you'd like included." },
+      { q: "When do you clean?", a: "Whenever your facility is quietest: overnight, early morning, or between classes. We build the schedule around your hours." },
+      { q: "Do you clean yoga and boutique fitness studios?", a: "Yes. We clean studios of all sizes, from single-room boutique studios to full-size gyms." },
+      { q: "How much does gym cleaning cost?", a: "It depends on square footage, the number of locker rooms and restrooms, and how often you need service. We start with a free walkthrough and send a written quote." },
+    ],
+  },
+
+  office: {
+    slug: "office-cleaning",
+    navLabel: "Office Cleaning",
+    serviceType: "Office cleaning",
+    metaTitle: "Office Cleaning Services in Montgomery County, PA",
+    metaDescription:
+      "Office cleaning and janitorial services in North Wales, Blue Bell, Fort Washington & Montgomery County, PA. Nightly or weekly. Free walkthrough.",
+    eyebrow: "Office & Janitorial Cleaning",
+    h1: "Office Cleaning Services in Montgomery County, PA",
+    intro:
+      "A clean office keeps your team comfortable and makes the right impression on clients. We clean workstations, conference rooms, kitchens, and restrooms on a nightly or weekly schedule, following a written checklist every visit.",
+    highlights: [
+      { title: "Nightly or weekly", text: "Choose the schedule that fits your office, from once a week to every weeknight." },
+      { title: "After-hours service", text: "We clean after your team goes home, so work is never interrupted." },
+      { title: "Checklist-driven", text: "A written scope for every area, so nothing is left to memory and quality stays consistent." },
+      { title: "The same team every visit", text: "Whenever possible, the same crew services your office, so they learn your space and you know who has your keys." },
+      { title: "One point of contact", text: "A dedicated account manager who answers the phone and handles requests quickly." },
+      { title: "Licensed & insured", text: "Certificate of insurance on request, and we can name your company or landlord as additional insured." },
+    ],
+    sectionsTitle: "What we clean in your office",
+    sections: [
+      { title: "Workstations & private offices", text: "Desks (cleared surfaces), phones, chairs, and floors cleaned; trash and recycling emptied." },
+      { title: "Conference rooms", text: "Tables, chairs, whiteboards (on request), glass, and floors cleaned and reset." },
+      { title: "Kitchens & break rooms", text: "Counters, sinks, tables, and exterior appliance surfaces cleaned and disinfected." },
+      { title: "Restrooms", text: "Toilets, sinks, fixtures, mirrors, and floors cleaned and disinfected, with optional supply restocking." },
+      { title: "Lobbies & common areas", text: "Entry glass, reception desks, seating, and floors kept client-ready." },
+      { title: "Floor care", text: "Carpets vacuumed and hard floors mopped every visit, with periodic deep cleaning available." },
+    ],
+    faqs: [
+      { q: "How often should an office be cleaned?", a: "Most offices do well with two to five cleanings per week, depending on headcount and foot traffic. Smaller offices may only need weekly service. We'll recommend a schedule during your free walkthrough." },
+      { q: "Do you clean after hours?", a: "Yes. Most of our office clients are cleaned in the evening after staff leave." },
+      { q: "Do you provide a certificate of insurance?", a: "Yes. We can send a certificate of insurance before we start and add your company or property manager as additional insured if required." },
+      { q: "Which areas do you serve?", a: "We serve Montgomery County, including North Wales, Ambler, Blue Bell, Fort Washington, Horsham, Gwynedd, and Plymouth Meeting, plus the Main Line and surrounding areas." },
+      { q: "How much does office cleaning cost?", a: "It depends on square footage, how often you need service, and the scope of work. We start with a free walkthrough and send a written quote with a clear checklist." },
+    ],
+  },
 };
 
-export const INDUSTRY_ORDER = ["commercial", "daycare", "dealership", "warehouse"];
+export const INDUSTRY_ORDER = ["commercial", "office", "medical", "eyecare", "fitness", "daycare", "dealership", "warehouse"];

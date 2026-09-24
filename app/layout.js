@@ -5,11 +5,11 @@ const siteUrl = "https://www.spotlessspaces-cleaning.com";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Spotless Spaces | Commercial Cleaning in Montgomery & Bucks County, PA",
+    default: "Commercial Cleaning Services in Montgomery County, PA | Spotless Spaces",
     template: "%s | Spotless Spaces",
   },
   description:
-    "Spotless Spaces provides licensed, insured commercial and janitorial cleaning for offices, medical and dental practices, fitness centers, daycares, car dealerships, and warehouses in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Residential cleaning also available. Request a free walkthrough.",
+    "Commercial and office cleaning in North Wales, Blue Bell, Ambler & Montgomery County, PA. Medical, gym, daycare, and home cleaning too. Free walkthrough.",
   keywords: [
     "commercial cleaning Montgomery County PA",
     "commercial cleaning Bucks County PA",
@@ -43,9 +43,9 @@ export const metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Spotless Spaces",
-    title: "Spotless Spaces | Commercial Cleaning in Montgomery & Bucks County, PA",
+    title: "Commercial Cleaning Services in Montgomery County, PA | Spotless Spaces",
     description:
-      "Licensed, insured commercial cleaning for offices, medical and dental practices, fitness centers, daycares, car dealerships, and warehouses in Montgomery & Bucks County, PA. Residential cleaning also available. Request a free walkthrough.",
+      "Commercial and office cleaning in North Wales, Blue Bell, Ambler & Montgomery County, PA. Medical, gym, daycare, and home cleaning too. Free walkthrough.",
     locale: "en_US",
     images: [
       {
@@ -58,9 +58,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Spotless Spaces | Commercial Cleaning in Montgomery & Bucks County, PA",
+    title: "Commercial Cleaning Services in Montgomery County, PA | Spotless Spaces",
     description:
-      "Licensed, insured commercial cleaning for offices, medical and dental practices, fitness centers, daycares, car dealerships, and warehouses in Montgomery & Bucks County, PA. Residential cleaning also available. Request a free walkthrough.",
+      "Commercial and office cleaning in North Wales, Blue Bell, Ambler & Montgomery County, PA. Medical, gym, daycare, and home cleaning too. Free walkthrough.",
     images: ["/logo.jpg"],
   },
   robots: {
@@ -75,7 +75,7 @@ export const metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
+  "@type": "LocalBusiness",
   name: "Spotless Spaces",
   description:
     "Insured commercial and janitorial cleaning contracts for offices, medical and dental practices, fitness centers, daycares, car dealerships, and warehouses in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Residential deep, standard, and move-in/move-out cleaning also available.",
@@ -101,7 +101,27 @@ const jsonLd = {
     "Montgomery County, PA",
     "Bucks County, PA",
   ],
-  priceRange: "$150 - $$$",
+  priceRange: "$$",
+  image: `${siteUrl}/logo.jpg`,
+  logo: `${siteUrl}/logo.jpg`,
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Cleaning services",
+    itemListElement: [
+      ["Commercial cleaning", "/commercial-cleaning"],
+      ["Office cleaning", "/office-cleaning"],
+      ["Medical and dental office cleaning", "/medical-office-cleaning"],
+      ["Optometry and eye care office cleaning", "/optometry-office-cleaning"],
+      ["Gym and fitness center cleaning", "/gym-cleaning"],
+      ["Daycare and child care center cleaning", "/daycare-cleaning"],
+      ["Car dealership cleaning", "/car-dealership-cleaning"],
+      ["Warehouse and light industrial cleaning", "/warehouse-cleaning"],
+      ["Residential cleaning", "/#residential"],
+    ].map(([name, path]) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name, url: `${siteUrl}${path}` },
+    })),
+  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

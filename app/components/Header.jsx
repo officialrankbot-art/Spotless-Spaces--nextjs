@@ -11,6 +11,7 @@ export default function Header() {
             <a href="/#industries">Industries</a>
             <a href="/#values">Why Us</a>
             <a href="/#residential">Residential</a>
+            <a href="/service-areas">Service Areas</a>
             <a href="/#faq">FAQ</a>
             <a href="/#careers">Careers</a>
           </div>
@@ -27,6 +28,7 @@ export default function Header() {
         <a href="/#industries">Industries</a>
         <a href="/#values">Why Us</a>
         <a href="/#residential">Residential</a>
+        <a href="/service-areas">Service Areas</a>
         <a href="/#faq">FAQ</a>
         <a href="/#careers">Careers</a>
         <a href="tel:+12676621878" className="mnav-phone">267-662-1878</a>
