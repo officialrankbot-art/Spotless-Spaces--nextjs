@@ -3,18 +3,19 @@ export default function Header() {
     <header>
       <div className="wrap">
         <nav>
-          <a href="#top" className="brand">
+          <a href="/" className="brand">
             <img src="/logo.jpg" alt="Spotless Spaces logo"/> Spotless Spaces
           </a>
           <div className="navlinks">
-            <a href="#values">Values</a>
-            <a href="#types-of-clean">Services</a>
-            <a href="#services">What We Offer</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#difference">Difference</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#faq">FAQ</a>
-            <a href="#careers">Careers</a>
+            <a href="/#values">Values</a>
+            <a href="/#types-of-clean">Services</a>
+            <a href="/#services">What We Offer</a>
+            <a href="/commercial-cleaning">Commercial</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#difference">Difference</a>
+            <a href="/#reviews">Reviews</a>
+            <a href="/#faq">FAQ</a>
+            <a href="/#careers">Careers</a>
           </div>
           <div className="nav-cta">
             <a href="https://spotlessspaces.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn btn-navy" style={{padding: '11px 22px'}}>Book Now</a>
@@ -25,14 +26,15 @@ export default function Header() {
         </nav>
       </div>
       <div className="mobile-menu" id="mobile-menu">
-        <a href="#values">Our Values</a>
-        <a href="#types-of-clean">Services</a>
-        <a href="#services">What We Offer</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#difference">Our Difference</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#faq">FAQ</a>
-        <a href="#careers">Careers</a>
+        <a href="/#values">Our Values</a>
+        <a href="/#types-of-clean">Services</a>
+        <a href="/#services">What We Offer</a>
+        <a href="/commercial-cleaning">Commercial</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#difference">Our Difference</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#careers">Careers</a>
         <span className="mnav-phone">267-662-1878</span>
         <a href="https://spotlessspaces.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn btn-navy">Book Now</a>
       </div>

@@ -6,6 +6,7 @@ import TypesOfClean from './components/TypesOfClean';
 import QuoteBuilder from './components/QuoteBuilder';
 import Pricing from './components/Pricing';
 import Walkthrough from './components/Walkthrough';
+import CommercialIndustries from './components/CommercialIndustries';
 import Difference from './components/Difference';
 import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
@@ -25,6 +26,7 @@ export default function Home() {
       <WhatWeOffer />
       <QuoteBuilder />
       <Pricing />
+      <CommercialIndustries />
       <Walkthrough />
       <Difference />
       <Reviews />

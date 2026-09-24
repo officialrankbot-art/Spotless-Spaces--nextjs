@@ -10,10 +10,12 @@ export default function Footer() {
           <div>
             <h5>Company</h5>
             <ul>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#reviews">Reviews</a></li>
-              <li><a href="#faq">FAQ</a></li>
+              <li><a href="/#services">Services</a></li>
+              <li><a href="/commercial-cleaning">Commercial Cleaning</a></li>
+              <li><a href="/daycare-cleaning">Daycare Cleaning</a></li>
+              <li><a href="/#pricing">Pricing</a></li>
+              <li><a href="/#reviews">Reviews</a></li>
+              <li><a href="/#faq">FAQ</a></li>
             </ul>
           </div>
           <div>

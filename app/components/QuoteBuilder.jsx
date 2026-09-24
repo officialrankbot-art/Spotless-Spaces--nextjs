@@ -117,10 +117,3 @@ export default function QuoteBuilder() {
     </section>
   );
 }
-.qb-save-badge {
-  display: block;
-  font-size: 0.72rem;
-  color: var(--sage, #4a7c59);
-  font-weight: 600;
-  margin-top: 4px;
-}

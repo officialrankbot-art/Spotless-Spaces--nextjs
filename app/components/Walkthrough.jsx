@@ -24,7 +24,7 @@ export default function Walkthrough() {
                   <div className="qb-field"><label>Approx. square footage</label><input type="text" name="sqft" id="w-sqft" placeholder="e.g. 4,500 sq ft"/></div>
                 </div>
                 <div className="qb-row2">
-                  <div className="qb-field"><label>Business address</label><input type="text" name="address" id="w-address" placeholder="123 Main St, Minneapolis, MN"/></div>
+                  <div className="qb-field"><label>Business address</label><input type="text" name="address" id="w-address" placeholder="123 Main St, Ambler, PA"/></div>
                   <div className="qb-field"><label>Preferred walkthrough date</label><input type="date" name="date" id="w-date"/></div>
                 </div>
                 <div className="qb-field">
