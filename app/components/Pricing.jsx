@@ -1,13 +1,13 @@
 export default function Pricing() {
   return (
-    <section id="pricing">
+    <section id="pricing" style={{background: 'var(--mist)'}}>
       <div className="wrap">
         <div className="section-head center reveal">
-          <span className="eyebrow">Pricing</span>
-          <h2>Straightforward packages</h2>
-          <p>Every tier includes our quality checklist.</p>
+          <span className="eyebrow">Residential Pricing</span>
+          <h2>Straightforward home packages</h2>
+          <p>Every tier includes our quality checklist. Commercial pricing is custom, based on a free walkthrough.</p>
         </div>
-        <div className="pricing-grid">
+        <div className="pricing-grid pricing-grid-3">
           <div className="price-card featured reveal" style={{position: 'relative'}}>
             <h3>Deep Clean</h3>
             <div className="amount"><span>Starting At&nbsp;</span>$140</div>
@@ -17,7 +17,7 @@ export default function Pricing() {
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Exterior appliances wiped &amp; sanitized</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Baseboards, vents &amp; light fixtures</li>
             </ul>
-            <a href="https://spotlessspaces.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{width: '100%'}}>Choose Deep Clean</a>
+            <a href="#quote" className="btn btn-gold" style={{width: '100%'}}>Request a Deep Clean</a>
             <div className="price-arrow" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </div>
@@ -31,7 +31,7 @@ export default function Pricing() {
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Kitchen &amp; bathroom wipe-down and sanitizing</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Trash removal &amp; surface tidying</li>
             </ul>
-            <a href="https://spotlessspaces.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn btn-navy" style={{width: '100%'}}>Choose Standard Clean</a>
+            <a href="#quote" className="btn btn-navy" style={{width: '100%'}}>Request a Standard Clean</a>
           </div>
           <div className="price-card reveal">
             <h3>Move-In / Move-Out Clean</h3>
@@ -42,18 +42,7 @@ export default function Pricing() {
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Walls &amp; door frames spot-cleaned</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Floors detailed edge-to-edge</li>
             </ul>
-            <a href="https://spotlessspaces.bookingkoala.com/booknow" target="_blank" rel="noopener noreferrer" className="btn btn-navy" style={{width: '100%'}}>Choose Move-In / Move-Out</a>
-          </div>
-          <div className="price-card reveal">
-            <h3>Commercial Cleaning Service</h3>
-            <div className="amount">Custom<span>&nbsp;by sq ft</span></div>
-            <ul>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Nightly, weekly or custom schedule</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dedicated account manager</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Supply &amp; consumable restocking</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>Certificate of insurance on file</li>
-            </ul>
-            <a href="#walkthrough" className="btn btn-navy" style={{width: '100%'}}>Get a Free Commercial Cleaning Quotation</a>
+            <a href="#quote" className="btn btn-navy" style={{width: '100%'}}>Request a Move-In / Move-Out</a>
           </div>
         </div>
       </div>

@@ -5,12 +5,23 @@ const siteUrl = "https://www.spotlessspaces-cleaning.com";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Spotless Spaces | Residential & Commercial Cleaning in Montgomery & Bucks County, PA",
+    default: "Spotless Spaces | Commercial Cleaning in Montgomery & Bucks County, PA",
     template: "%s | Spotless Spaces",
   },
   description:
-    "Spotless Spaces provides trusted, insured residential and commercial cleaning in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Get an instant quote and book online in minutes.",
+    "Spotless Spaces provides licensed, insured commercial and janitorial cleaning for offices, medical and dental practices, fitness centers, daycares, car dealerships, and warehouses in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Residential cleaning also available. Request a free walkthrough.",
   keywords: [
+    "commercial cleaning Montgomery County PA",
+    "commercial cleaning Bucks County PA",
+    "janitorial services Montgomery County PA",
+    "office cleaning North Wales PA",
+    "office cleaning Blue Bell PA",
+    "medical office cleaning Montgomery County PA",
+    "dental office cleaning Montgomery County PA",
+    "gym cleaning Montgomery County PA",
+    "daycare cleaning Montgomery County PA",
+    "car dealership cleaning PA",
+    "warehouse cleaning Montgomery County PA",
     "house cleaning Montgomery County PA",
     "house cleaning Bucks County PA",
     "house cleaning Main Line PA",
@@ -19,8 +30,6 @@ export const metadata = {
     "house cleaning Gwynedd PA",
     "house cleaning Horsham PA",
     "house cleaning Plymouth Meeting PA",
-    "commercial cleaning Montgomery County PA",
-    "commercial cleaning Bucks County PA",
     "move in move out cleaning",
     "deep cleaning service",
     "residential cleaning company",
@@ -34,9 +43,9 @@ export const metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Spotless Spaces",
-    title: "Spotless Spaces | Residential & Commercial Cleaning in Montgomery & Bucks County, PA",
+    title: "Spotless Spaces | Commercial Cleaning in Montgomery & Bucks County, PA",
     description:
-      "Trusted, insured residential and commercial cleaning in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Get an instant quote and book online in minutes.",
+      "Licensed, insured commercial cleaning for offices, medical and dental practices, fitness centers, daycares, car dealerships, and warehouses in Montgomery & Bucks County, PA. Residential cleaning also available. Request a free walkthrough.",
     locale: "en_US",
     images: [
       {
@@ -49,9 +58,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Spotless Spaces | Residential & Commercial Cleaning in Montgomery & Bucks County, PA",
+    title: "Spotless Spaces | Commercial Cleaning in Montgomery & Bucks County, PA",
     description:
-      "Trusted, insured residential and commercial cleaning in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Get an instant quote and book online in minutes.",
+      "Licensed, insured commercial cleaning for offices, medical and dental practices, fitness centers, daycares, car dealerships, and warehouses in Montgomery & Bucks County, PA. Residential cleaning also available. Request a free walkthrough.",
     images: ["/logo.jpg"],
   },
   robots: {
@@ -69,7 +78,7 @@ const jsonLd = {
   "@type": "HomeAndConstructionBusiness",
   name: "Spotless Spaces",
   description:
-    "Trusted, insured residential and commercial cleaning in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Deep cleaning, move-in/move-out cleaning, and commercial cleaning contracts.",
+    "Insured commercial and janitorial cleaning contracts for offices, medical and dental practices, fitness centers, daycares, car dealerships, and warehouses in North Wales, Ambler, Blue Bell, Gwynedd, Horsham, Plymouth Meeting, Fort Washington, and the Main Line, PA. Residential deep, standard, and move-in/move-out cleaning also available.",
   url: siteUrl,
   telephone: "+12676621878",
   email: "info@spotlessspaces-cleaning.com",

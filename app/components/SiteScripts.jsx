@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 
 // This component ports the site's original vanilla-JS behavior (scroll reveal,
-// FAQ accordion, quote builder, walkthrough form, mobile menu) into a Next.js
+// FAQ accordion, residential lead form, walkthrough form, mobile menu) into a Next.js
 // client component. It runs once after the page mounts and attaches the same
 // DOM event listeners the static site used, so behavior matches exactly.
 export default function SiteScripts() {
@@ -55,193 +55,34 @@ export default function SiteScripts() {
       });
     }
     // Belt-and-suspenders: never let either form actually navigate the page
-    ['quote-form', 'walkthrough-form-tag'].forEach((id) => {
+    ['residential-form-tag', 'walkthrough-form-tag'].forEach((id) => {
       const el = document.getElementById(id);
       if (el) el.addEventListener('submit', (e) => e.preventDefault());
     });
 
-    // Quote builder
-    let qbCleanup = () => {};
-    (function () {
-      const nextBtn = document.getElementById('qb-next');
-      if (!nextBtn) return;
-      const state = { service: null, size: null, frequency: null, mult: 1, hours: 0 };
-      let currentStep = 1;
-      const steps = document.querySelectorAll('.qb-step');
-      const dots = document.querySelectorAll('.qb-step-dot');
-      const backBtn = document.getElementById('qb-back');
-      const nav = document.getElementById('qb-nav');
-
-      // Hourly labor rate used for every estimate
-      const HOURLY_RATE = 70;
-
-      // Crew-time tiers by bedroom/bathroom count. These are pulled straight
-      // from the BookingKoala master pricing guide (in minutes, so we never
-      // lose precision on the odd durations like 4hr20min or 5hr5min), so the
-      // website estimate matches the BookingKoala job price exactly at the
-      // labor level. Square footage is collected separately as a reference
-      // sanity-check only — it does not factor into the estimate.
-      const bedroomTiers = [
-        { label: 'Studio / 1 Bath', value: 'studio-1ba', minutes: { ResidentialDeep: 150, ResidentialStandard: 90, ResidentialMove: 180 } },
-        { label: '1 Bed / 1 Bath', value: '1bed-1ba', minutes: { ResidentialDeep: 180, ResidentialStandard: 120, ResidentialMove: 195 } },
-        { label: '2 Bed / 1 Bath', value: '2bed-1ba', minutes: { ResidentialDeep: 210, ResidentialStandard: 150, ResidentialMove: 255 } },
-        { label: '2 Bed / 1.5 Bath', value: '2bed-1.5ba', minutes: { ResidentialDeep: 230, ResidentialStandard: 165, ResidentialMove: 285 } },
-        { label: '2 Bed / 2 Bath', value: '2bed-2ba', minutes: { ResidentialDeep: 240, ResidentialStandard: 180, ResidentialMove: 305 } },
-        { label: '3 Bed / 1 Bath', value: '3bed-1ba', minutes: { ResidentialDeep: 255, ResidentialStandard: 195, ResidentialMove: 315 } },
-        { label: '3 Bed / 2 Bath', value: '3bed-2ba', minutes: { ResidentialDeep: 300, ResidentialStandard: 210, ResidentialMove: 345 } },
-        { label: '3 Bed / 2.5 Bath', value: '3bed-2.5ba', minutes: { ResidentialDeep: 315, ResidentialStandard: 240, ResidentialMove: 375 } },
-        { label: '4 Bed / 2 Bath', value: '4bed-2ba', minutes: { ResidentialDeep: 375, ResidentialStandard: 240, ResidentialMove: 405 } },
-        { label: '4 Bed / 2.5 Bath', value: '4bed-2.5ba', minutes: { ResidentialDeep: 390, ResidentialStandard: 260, ResidentialMove: 435 } },
-        { label: '4 Bed / 3 Bath', value: '4bed-3ba', minutes: { ResidentialDeep: 420, ResidentialStandard: 285, ResidentialMove: 480 } },
-        { label: '5+ Bed / 3+ Bath', value: '5bed-3ba', minutes: { ResidentialDeep: 540, ResidentialStandard: 315, ResidentialMove: 600 } },
-        { label: '6+ Bed / 4+ Bath', value: '6bed-4ba', minutes: { ResidentialDeep: 660, ResidentialStandard: 435, ResidentialMove: 780 } },
-      ];
-
-      const serviceLabels = {
-        ResidentialDeep: 'residential deep',
-        ResidentialStandard: 'residential standard',
-        ResidentialMove: 'residential move-in / move-out',
-        Commercial: 'commercial',
-      };
-
-      function attachOptionHandlers(scope) {
-        if (!scope) return;
-        scope.querySelectorAll('.qb-opt').forEach((opt) => {
-          opt.addEventListener('click', () => {
-            const field = opt.dataset.field;
-            scope.querySelectorAll(`.qb-opt[data-field="${field}"]`).forEach((o) => o.classList.remove('selected'));
-            opt.classList.add('selected');
-            state[field] = opt.dataset.value;
-            if (field === 'size') state.hours = parseFloat(opt.dataset.hours);
-            if (field === 'frequency') state.mult = parseFloat(opt.dataset.mult);
-            nextBtn.disabled = false;
-            updateNextLabel();
-          });
+    // Residential lead form
+    const residentialBtn = document.getElementById('residential-submit');
+    const onResidentialSubmit = () => {
+      const form = document.getElementById('residential-form-tag');
+      const error = document.getElementById('residential-error');
+      if (!form.checkValidity()) {
+        error.style.display = 'block';
+        form.reportValidity();
+        return;
+      }
+      error.style.display = 'none';
+      const name = document.getElementById('r-name').value.trim().split(' ')[0];
+      residentialBtn.disabled = true;
+      submitToNetlify(form)
+        .catch((err) => console.error('Residential form submission failed:', err))
+        .finally(() => {
+          residentialBtn.disabled = false;
+          document.getElementById('residential-confirm-name').textContent = name || 'there';
+          document.getElementById('residential-form').style.display = 'none';
+          document.getElementById('residential-confirm').style.display = 'block';
         });
-      }
-
-      function updateNextLabel() {
-        if (currentStep === 1 && state.service === 'Commercial') {
-          nextBtn.textContent = 'Go to Walkthrough Request';
-        } else if (currentStep === 4) {
-          nextBtn.textContent = 'Request Booking';
-        } else {
-          nextBtn.textContent = 'Continue';
-        }
-      }
-
-      function renderSizeOptions() {
-        const type = state.service || 'ResidentialDeep';
-        const container = document.getElementById('size-options');
-        container.innerHTML = '';
-        bedroomTiers.forEach((tier) => {
-          const div = document.createElement('div');
-          div.className = 'qb-opt';
-          div.dataset.field = 'size';
-          div.dataset.value = tier.value;
-          // Convert stored minutes to hours here so state.hours stays a
-          // plain decimal, same as before — just sourced from minutes so
-          // odd durations (e.g. 4hr20min) don't get rounded off.
-          div.dataset.hours = tier.minutes[type] / 60;
-          div.textContent = tier.label;
-          container.appendChild(div);
-        });
-        attachOptionHandlers(container);
-      }
-
-      attachOptionHandlers(document.querySelector('[data-step="1"]'));
-      attachOptionHandlers(document.querySelector('[data-step="3"]'));
-
-      function isStepValid(n) {
-        if (n === 1) return !!state.service;
-        if (n === 2) return !!state.size;
-        if (n === 3) return !!state.frequency;
-        return true;
-      }
-
-      function updateEstimate() {
-        const total = Math.round(state.hours * HOURLY_RATE * (state.mult || 1));
-        document.getElementById('estimate-amt').textContent = '$' + total;
-      }
-
-      function goToStep(n) {
-        steps.forEach((s) => {
-          s.style.display = s.dataset.step == n ? 'block' : 'none';
-        });
-        dots.forEach((d, i) => {
-          d.classList.remove('active', 'done');
-          if (i + 1 < n) d.classList.add('done');
-          if (i + 1 === n) d.classList.add('active');
-        });
-        currentStep = n;
-        backBtn.style.visibility = n === 1 ? 'hidden' : 'visible';
-        updateNextLabel();
-        nextBtn.disabled = !isStepValid(n);
-        if (n === 4) updateEstimate();
-        if (n === 'confirm') {
-          nav.style.display = 'none';
-          document.querySelectorAll('.qb-step-dot').forEach((d) => d.classList.add('done'));
-        } else {
-          nav.style.display = 'flex';
-        }
-      }
-
-      const onNext = () => {
-        if (currentStep === 1) {
-          if (state.service === 'Commercial') {
-            const walkthrough = document.getElementById('walkthrough');
-            if (walkthrough) walkthrough.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            return;
-          }
-          renderSizeOptions();
-          goToStep(2);
-          return;
-        }
-        if (currentStep === 2) {
-          goToStep(3);
-          return;
-        }
-        if (currentStep === 3) {
-          goToStep(4);
-          return;
-        }
-        if (currentStep === 4) {
-          const name = document.getElementById('q-name').value.trim();
-          document.getElementById('confirm-name').textContent = name || 'there';
-          document.getElementById('confirm-details').textContent =
-            (serviceLabels[state.service] || '') + ' ' + (state.frequency || '').toLowerCase() + ' cleaning';
-
-          // Populate hidden fields with the JS-tracked selections, then submit
-          document.getElementById('hidden-service').value = serviceLabels[state.service] || state.service || '';
-          document.getElementById('hidden-size').value = state.size || '';
-          document.getElementById('hidden-frequency').value = state.frequency || '';
-          document.getElementById('hidden-price').value = document.getElementById('estimate-amt').textContent || '';
-
-          nextBtn.disabled = true;
-          const quoteForm = document.getElementById('quote-form');
-          submitToNetlify(quoteForm)
-            .catch((err) => console.error('Quote form submission failed:', err))
-            .finally(() => {
-              nextBtn.disabled = false;
-              goToStep('confirm');
-            });
-        }
-      };
-      const onBack = () => {
-        if (currentStep === 2) goToStep(1);
-        else if (currentStep === 3) goToStep(2);
-        else if (currentStep === 4) goToStep(3);
-      };
-
-      nextBtn.addEventListener('click', onNext);
-      backBtn.addEventListener('click', onBack);
-      goToStep(1);
-
-      qbCleanup = () => {
-        nextBtn.removeEventListener('click', onNext);
-        backBtn.removeEventListener('click', onBack);
-      };
-    })();
+    };
+    if (residentialBtn) residentialBtn.addEventListener('click', onResidentialSubmit);
 
     // Commercial walkthrough request form
     const walkthroughBtn = document.getElementById('walkthrough-submit');
@@ -290,7 +131,7 @@ export default function SiteScripts() {
     return () => {
       io.disconnect();
       faqHandlers.forEach(([q, handler]) => q.removeEventListener('click', handler));
-      qbCleanup();
+      if (residentialBtn) residentialBtn.removeEventListener('click', onResidentialSubmit);
       if (walkthroughBtn) walkthroughBtn.removeEventListener('click', onWalkthroughSubmit);
       if (menuBtn && onMenuToggle) menuBtn.removeEventListener('click', onMenuToggle);
       menuLinkHandlers.forEach(([a, handler]) => a.removeEventListener('click', handler));

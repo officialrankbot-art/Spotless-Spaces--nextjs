@@ -3,12 +3,11 @@ import Hero from './components/Hero';
 import Values from './components/Values';
 import WhatWeOffer from './components/WhatWeOffer';
 import TypesOfClean from './components/TypesOfClean';
-import QuoteBuilder from './components/QuoteBuilder';
+import ResidentialLeadForm from './components/ResidentialLeadForm';
 import Pricing from './components/Pricing';
 import Walkthrough from './components/Walkthrough';
 import CommercialIndustries from './components/CommercialIndustries';
 import Difference from './components/Difference';
-import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Careers from './components/Careers';
@@ -21,15 +20,14 @@ export default function Home() {
       <Header />
       <div id="top"></div>
       <Hero />
-      <Values />
-      <TypesOfClean />
-      <WhatWeOffer />
-      <QuoteBuilder />
-      <Pricing />
       <CommercialIndustries />
       <Walkthrough />
+      <Values />
       <Difference />
-      <Reviews />
+      <TypesOfClean />
+      <Pricing />
+      <ResidentialLeadForm />
+      <WhatWeOffer />
       <FAQ />
       <FinalCTA />
       <Careers />

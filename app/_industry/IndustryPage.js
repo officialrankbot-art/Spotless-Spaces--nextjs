@@ -125,7 +125,7 @@ export default function IndustryPage({ industry }) {
           </div>
           <ul className={styles.trust}>
             <li>Licensed &amp; Insured</li>
-            <li>Background-Checked Crews</li>
+            <li>Same Crew Every Visit</li>
             <li>After-Hours Scheduling</li>
             <li>Certificate of Insurance on Request</li>
           </ul>
