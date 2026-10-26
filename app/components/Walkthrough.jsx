@@ -1,3 +1,5 @@
+import PromoNote from "./PromoNote";
+
 export default function Walkthrough() {
   return (
     <section id="walkthrough" style={{background: 'var(--mist)'}}>
@@ -6,6 +8,7 @@ export default function Walkthrough() {
           <span className="eyebrow">Commercial Cleaning</span>
           <h2>Request a Free Walkthrough</h2>
           <p>Tell us about your space and we'll schedule an on-site (or virtual) walkthrough to build your custom commercial cleaning quote.</p>
+          <PromoNote />
         </div>
         <div className="quote-wrap reveal" style={{maxWidth: '640px', margin: '0 auto'}}>
           <div className="quote-card">
@@ -86,12 +89,13 @@ export default function Walkthrough() {
                   <textarea name="notes" id="w-notes" rows="3" placeholder="Hours of operation, areas to focus on, products to use or avoid, access or alarm details, etc." style={{width: '100%', padding: '13px 16px', borderRadius: '14px', border: '1.5px solid var(--line)', fontFamily: 'Nunito,sans-serif', fontSize: '.95rem', resize: 'vertical'}}></textarea>
                 </div>
                 <button type="button" className="btn btn-navy" id="walkthrough-submit" style={{width: '100%', marginTop: '6px'}}>Request Walkthrough</button>
+                <p style={{textAlign: 'center', fontSize: '.9rem', color: 'var(--slate)', margin: '12px 0 0'}}>Free, no obligation. We&apos;ll reply within one business day.</p>
               </form>
             </div>
             <div id="walkthrough-confirm" style={{display: 'none', textAlign: 'center', padding: '20px 0'}}>
               <div className="confirm-check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
-              <h3>Request received, <span id="walkthrough-confirm-name">there</span>!</h3>
-              <p style={{color: 'var(--slate)', maxWidth: '400px', margin: '0 auto'}}>A Spotless Spaces coordinator will be in touch shortly to schedule your walkthrough.</p>
+              <h3>Thanks<span id="walkthrough-confirm-name"></span>! Your request is in.</h3>
+              <p style={{color: 'var(--slate)', maxWidth: '400px', margin: '0 auto'}}>A Spotless Spaces coordinator will reach out within one business day to schedule your walkthrough.</p>
             </div>
           </div>
         </div>

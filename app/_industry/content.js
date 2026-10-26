@@ -1,7 +1,7 @@
 // Content for the commercial / industry landing pages.
 // Edit wording here — every page reads from this file.
 
-export const SITE_URL = "https://www.spotlessspaces-cleaning.com";
+export const SITE_URL = "https://spotlessspaces-cleaning.com";
 export const PHONE_DISPLAY = "267-662-1878";
 export const PHONE_TEL = "+12676621878";
 export const EMAIL = "info@spotlessspaces-cleaning.com";
@@ -45,7 +45,7 @@ export const INDUSTRIES = {
       { title: "Car dealerships", text: "Showroom floors, glass, customer lounges, restrooms, service waiting areas, and offices.", href: "/car-dealership-cleaning" },
       { title: "Warehouses & light industrial", text: "Office areas, break rooms, restrooms, locker rooms, and floor sweeping for distribution and light industrial sites.", href: "/warehouse-cleaning" },
       { title: "Offices & professional suites", text: "Workstations, conference rooms, lobbies, kitchens, and restrooms on a nightly or weekly schedule.", href: "/office-cleaning" },
-      { title: "Retail & showrooms", text: "Sales floors, fitting rooms, entryways, and glass kept customer-ready." },
+      { title: "Retail & showrooms", text: "Sales floors, fitting rooms, entryways, and glass kept customer-ready.", href: "/retail-cleaning" },
       { title: "Medical & dental offices", text: "Waiting rooms, exam rooms, operatories, and restrooms cleaned and disinfected on your schedule.", href: "/medical-office-cleaning" },
       { title: "Optometry & eye care practices", text: "Front desks, frame displays, glass, exam rooms, and high-touch surfaces kept spotless.", href: "/optometry-office-cleaning" },
       { title: "Gyms & fitness centers", text: "Workout floors, locker rooms, showers, and restrooms cleaned and sanitized around your class schedule.", href: "/gym-cleaning" },
@@ -277,6 +277,42 @@ export const INDUSTRIES = {
     ],
   },
 
+  retail: {
+    slug: "retail-cleaning",
+    navLabel: "Retail Store Cleaning",
+    serviceType: "Retail store and showroom cleaning",
+    metaTitle: "Retail Store & Showroom Cleaning in Montgomery County, PA",
+    metaDescription:
+      "Retail store and showroom cleaning in North Wales, Plymouth Meeting, Blue Bell & Montgomery County, PA. After-hours service. Free walkthrough.",
+    eyebrow: "Retail Store & Showroom Cleaning",
+    h1: "Retail Store & Showroom Cleaning in Montgomery County, PA",
+    intro:
+      "Shoppers notice smudged glass, dusty shelves, and messy restrooms. We clean sales floors, entryways, fitting rooms, and restrooms after closing or before you open, so your store looks its best for every customer who walks in.",
+    highlights: [
+      { title: "Before open or after close", text: "We clean outside your business hours so your staff and shoppers are never interrupted." },
+      { title: "Glass & entryways", text: "Front doors, windows, display cases, and mirrors kept streak-free, because first impressions start at the door." },
+      { title: "Checklist-driven", text: "A written scope for every area, so nothing is left to memory and quality stays consistent." },
+      { title: "The same team every visit", text: "Whenever possible, the same crew services your store, so they learn your layout and you know who has your keys." },
+      { title: "Multi-location contracts", text: "One agreement, one invoice, and the same standard at every one of your stores." },
+      { title: "Licensed & insured", text: "Certificate of insurance on request, and we can name your landlord or property manager as additional insured." },
+    ],
+    sectionsTitle: "What we clean in your store",
+    sections: [
+      { title: "Sales floors", text: "Hard floors swept and mopped, carpets vacuumed, and high-traffic aisles kept clean." },
+      { title: "Displays & shelving", text: "Shelves, fixtures, and display surfaces dusted and wiped, working around your merchandise." },
+      { title: "Glass, windows & mirrors", text: "Entry doors, storefront glass, display cases, and mirrors cleaned streak-free." },
+      { title: "Fitting rooms", text: "Mirrors, benches, hooks, and floors cleaned so every room is ready for the next customer." },
+      { title: "Restrooms", text: "Toilets, sinks, fixtures, mirrors, and floors cleaned and disinfected, with optional supply restocking." },
+      { title: "Checkout & back of house", text: "Counters, high-touch points, break rooms, and stockroom floors cleaned; trash and recycling removed." },
+    ],
+    faqs: [
+      { q: "Can you clean before we open or after we close?", a: "Yes. Most retail clients are cleaned after closing or early in the morning, so the store is ready when doors open." },
+      { q: "Do you clean around merchandise and displays?", a: "Yes. We dust and wipe shelving and fixtures carefully, and we'll agree on which displays to clean and which to leave alone during your walkthrough." },
+      { q: "Can you handle multiple store locations?", a: "Yes. We can service several stores under one agreement with one point of contact, one invoice, and the same checklist at every location." },
+      { q: "How much does retail cleaning cost?", a: "It depends on square footage, how often you need service, and the scope of work. We start with a free walkthrough and send a written quote with a clear checklist." },
+    ],
+  },
+
   office: {
     slug: "office-cleaning",
     navLabel: "Office Cleaning",
@@ -315,4 +351,4 @@ export const INDUSTRIES = {
   },
 };
 
-export const INDUSTRY_ORDER = ["commercial", "office", "medical", "eyecare", "fitness", "daycare", "dealership", "warehouse"];
+export const INDUSTRY_ORDER = ["commercial", "office", "medical", "eyecare", "fitness", "daycare", "dealership", "warehouse", "retail"];

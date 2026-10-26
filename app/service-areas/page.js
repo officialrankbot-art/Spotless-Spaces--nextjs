@@ -4,12 +4,12 @@ import Footer from "../components/Footer";
 import Walkthrough from "../components/Walkthrough";
 import SiteScripts from "../components/SiteScripts";
 import styles from "../_industry/IndustryPage.module.css";
-import { TOWNS, TOWN_ORDER, townSlug } from "../_areas/content";
+import { TOWNS, TOWN_ORDER, townSlug, inTown } from "../_areas/content";
 
 export const metadata = {
   title: "Service Areas: Commercial Cleaning in Montgomery County, PA",
   description:
-    "Commercial cleaning in North Wales, Ambler, Blue Bell, Horsham, Fort Washington, Plymouth Meeting, Gwynedd, and nearby Montgomery County, PA towns.",
+    "Commercial cleaning in North Wales, Ambler, Blue Bell, Horsham, Fort Washington, Plymouth Meeting, Gwynedd, Bucks County, and the Main Line, PA.",
   alternates: { canonical: "/service-areas" },
 };
 
@@ -35,9 +35,9 @@ export default function ServiceAreas() {
             {TOWN_ORDER.map((k) => (
               <div key={k} className={styles.card}>
                 <h2 className={styles.h3}>
-                  <Link href={`/${townSlug(k)}`}>Commercial Cleaning in {TOWNS[k].name}, PA →</Link>
+                  <Link href={`/${townSlug(k)}`}>Commercial Cleaning {inTown(TOWNS[k])} →</Link>
                 </h2>
-                <p>ZIP {TOWNS[k].zip}. Also serving {TOWNS[k].nearby.slice(0, 3).join(", ")}.</p>
+                <p>{TOWNS[k].zip ? `ZIP ${TOWNS[k].zip}. Also serving` : "Including"} {TOWNS[k].nearby.slice(0, 3).join(", ")}.</p>
               </div>
             ))}
           </div>

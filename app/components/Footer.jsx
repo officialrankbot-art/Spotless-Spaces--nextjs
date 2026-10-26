@@ -18,6 +18,7 @@ export default function Footer() {
               <li><a href="/daycare-cleaning">Daycares</a></li>
               <li><a href="/car-dealership-cleaning">Car Dealerships</a></li>
               <li><a href="/warehouse-cleaning">Warehouses</a></li>
+              <li><a href="/retail-cleaning">Retail Stores</a></li>
               <li><a href="/#residential">Residential Cleaning</a></li>
               <li><a href="/#walkthrough">Free Walkthrough</a></li>
               <li><a href="/#faq">FAQ</a></li>
@@ -32,11 +33,12 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h5>Hours</h5>
+            <h5>Office Hours</h5>
             <ul>
               <li>Mon–Fri: 9am – 5pm</li>
               <li>Saturday: Closed</li>
               <li>Sunday: Closed</li>
+              <li style={{marginTop: '8px'}}>Cleaning crews work evenings &amp; weekends on your schedule.</li>
             </ul>
           </div>
           <div>
@@ -49,9 +51,9 @@ export default function Footer() {
               <li><a href="/commercial-cleaning-horsham-pa">Horsham</a></li>
               <li><a href="/commercial-cleaning-plymouth-meeting-pa">Plymouth Meeting</a></li>
               <li><a href="/commercial-cleaning-fort-washington-pa">Fort Washington</a></li>
-              <li>The Main Line</li>
+              <li><a href="/commercial-cleaning-main-line-pa">The Main Line</a></li>
               <li>Montgomery County</li>
-              <li>Bucks County &amp; Surrounding Areas</li>
+              <li><a href="/commercial-cleaning-bucks-county-pa">Bucks County &amp; Surrounding Areas</a></li>
               <li><a href="/service-areas">All service areas</a></li>
             </ul>
           </div>

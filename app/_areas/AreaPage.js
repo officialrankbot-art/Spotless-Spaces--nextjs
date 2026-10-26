@@ -5,13 +5,13 @@ import Walkthrough from "../components/Walkthrough";
 import SiteScripts from "../components/SiteScripts";
 import styles from "../_industry/IndustryPage.module.css";
 import { INDUSTRIES, INDUSTRY_ORDER, SITE_URL, PHONE_DISPLAY, PHONE_TEL, EMAIL } from "../_industry/content";
-import { TOWNS, TOWN_ORDER, townSlug } from "./content";
+import { TOWNS, TOWN_ORDER, townSlug, townPlace, inTown, inTownShort } from "./content";
 
 export function areaMetadata(key) {
   const t = TOWNS[key];
   const slug = townSlug(key);
-  const title = `Commercial Cleaning in ${t.name}, PA`;
-  const description = `Commercial cleaners serving ${t.name}, PA ${t.zip}. Office, medical, gym, and janitorial cleaning on your schedule. Licensed & insured. Free walkthrough.`;
+  const title = `Commercial Cleaning ${inTown(t)}`;
+  const description = `Commercial cleaners serving ${townPlace(t)}${t.zip ? ` ${t.zip}` : ""}. Office, medical, gym, and janitorial cleaning on your schedule. Licensed & insured. Free walkthrough.`;
   return {
     title,
     description,
@@ -36,16 +36,17 @@ const SUMMARIES = {
   daycare: "Classrooms, nap rooms, and restrooms cleaned after hours with child-safe products.",
   dealership: "Showrooms, customer lounges, service waiting areas, and offices kept customer-ready.",
   warehouse: "Break rooms, restrooms, offices, and floors cleaned around your shifts.",
+  retail: "Sales floors, glass, fitting rooms, and restrooms kept customer-ready.",
 };
 
 function faqs(t) {
   return [
     {
-      q: `Do you provide commercial cleaning in ${t.name}, PA?`,
-      a: `Yes. We clean offices, medical and dental practices, gyms, daycares, dealerships, warehouses, and retail spaces in ${t.name} (${t.zip}) and nearby ${t.nearby.slice(0, 3).join(", ")}.`,
+      q: `Do you provide commercial cleaning ${inTown(t)}?`,
+      a: `Yes. We clean offices, medical and dental practices, gyms, daycares, dealerships, warehouses, and retail spaces ${inTownShort(t)}${t.zip ? ` (${t.zip})` : ""}${t.region ? ", including" : " and nearby"} ${t.nearby.slice(0, 3).join(", ")}.`,
     },
     {
-      q: `How much does commercial cleaning cost in ${t.name}?`,
+      q: `How much does commercial cleaning cost ${inTownShort(t)}?`,
       a: "Pricing depends on square footage, how often you need service, and the scope of work. We start with a free walkthrough, on-site or virtual, and send a written quote with a clear checklist.",
     },
     {
@@ -71,7 +72,7 @@ export default function AreaPage({ town }) {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: `Commercial Cleaning in ${t.name}, PA`,
+      name: `Commercial Cleaning ${inTown(t)}`,
       serviceType: "Commercial cleaning",
       url,
       provider: {
@@ -84,7 +85,7 @@ export default function AreaPage({ town }) {
         address: { "@type": "PostalAddress", addressLocality: "North Wales", addressRegion: "PA", addressCountry: "US" },
       },
       areaServed: [
-        { "@type": "City", name: `${t.name}, PA` },
+        { "@type": t.region ? "AdministrativeArea" : "City", name: townPlace(t) },
         ...t.nearby.map((n) => ({ "@type": "Place", name: `${n}, PA` })),
       ],
     },
@@ -115,8 +116,8 @@ export default function AreaPage({ town }) {
         </div>
 
         <section className={styles.hero}>
-          <p className={styles.eyebrow}>Commercial Cleaners in {t.name}, PA {t.zip}</p>
-          <h1 className={styles.h1}>Commercial Cleaning Services in {t.name}, PA</h1>
+          <p className={styles.eyebrow}>Commercial Cleaners {inTown(t)}{t.zip ? ` ${t.zip}` : ""}</p>
+          <h1 className={styles.h1}>Commercial Cleaning Services {inTown(t)}</h1>
           <p className={styles.intro}>{t.intro}</p>
           <div className={styles.ctaRow}>
             <Link href="#walkthrough" className={styles.ctaPrimary}>Request a Free Walkthrough</Link>
@@ -153,7 +154,7 @@ export default function AreaPage({ town }) {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.h2}>Also serving near {t.name}</h2>
+          <h2 className={styles.h2}>{t.region ? `Towns we serve ${inTownShort(t)}` : `Also serving near ${t.name}`}</h2>
           <ul className={styles.areas}>
             {t.nearby.map((n) => {
               const match = TOWN_ORDER.find((k) => TOWNS[k].name === n);
@@ -180,7 +181,7 @@ export default function AreaPage({ town }) {
           <h2 className={styles.h2}>Other areas we serve</h2>
           <ul className={styles.related}>
             {otherTowns.map((k) => (
-              <li key={k}><Link href={`/${townSlug(k)}`}>Commercial cleaning in {TOWNS[k].name}</Link></li>
+              <li key={k}><Link href={`/${townSlug(k)}`}>Commercial cleaning {inTownShort(TOWNS[k])}</Link></li>
             ))}
             <li><Link href="/service-areas">All service areas</Link></li>
           </ul>

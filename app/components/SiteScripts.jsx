@@ -77,7 +77,7 @@ export default function SiteScripts() {
         .catch((err) => console.error('Residential form submission failed:', err))
         .finally(() => {
           residentialBtn.disabled = false;
-          document.getElementById('residential-confirm-name').textContent = name || 'there';
+          document.getElementById('residential-confirm-name').textContent = name ? `, ${name}` : '';
           document.getElementById('residential-form').style.display = 'none';
           document.getElementById('residential-confirm').style.display = 'block';
         });
@@ -87,14 +87,14 @@ export default function SiteScripts() {
     // Commercial walkthrough request form
     const walkthroughBtn = document.getElementById('walkthrough-submit');
     const onWalkthroughSubmit = () => {
-      const name = document.getElementById('w-name').value.trim();
+      const name = document.getElementById('w-name').value.trim().split(' ')[0];
       const walkthroughForm = document.getElementById('walkthrough-form-tag');
       walkthroughBtn.disabled = true;
       submitToNetlify(walkthroughForm)
         .catch((err) => console.error('Walkthrough form submission failed:', err))
         .finally(() => {
           walkthroughBtn.disabled = false;
-          document.getElementById('walkthrough-confirm-name').textContent = name || 'there';
+          document.getElementById('walkthrough-confirm-name').textContent = name ? `, ${name}` : '';
           document.getElementById('walkthrough-form').style.display = 'none';
           document.getElementById('walkthrough-confirm').style.display = 'block';
         });

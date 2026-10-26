@@ -12,7 +12,7 @@ const INDUSTRIES = [
   { tag: "Child care", title: "Daycares & Child Care Centers", text: "Classrooms, nap rooms, and restrooms cleaned with child-safe products.", href: "/daycare-cleaning" },
   { tag: "Automotive", title: "Car Dealerships", text: "Showrooms, customer lounges, service waiting areas, and offices.", href: "/car-dealership-cleaning" },
   { tag: "Industrial", title: "Warehouses & Light Industrial", text: "Break rooms, restrooms, locker rooms, offices, and floors, around your shifts.", href: "/warehouse-cleaning" },
-  { tag: "Retail", title: "Retail Stores & Showrooms", text: "Sales floors, fitting rooms, entryways, and glass kept customer-ready." },
+  { tag: "Retail", title: "Retail Stores & Showrooms", text: "Sales floors, fitting rooms, entryways, and glass kept customer-ready.", href: "/retail-cleaning" },
 ];
 
 const INCLUDED = [

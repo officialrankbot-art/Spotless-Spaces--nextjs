@@ -30,5 +30,5 @@ npm run start
 4. Deploy. Netlify handles SSR/ISR for Next.js automatically via that plugin.
 
 ### Before going live
-- Update `siteUrl` in `app/layout.js`, `app/sitemap.js`, and `app/robots.js` to your real domain once it's live on Netlify (currently set to `https://www.spotlessspaces-cleaning.com`).
+- Update `siteUrl` in `app/layout.js`, `app/sitemap.js`, and `app/robots.js` to your real domain once it's live on Netlify (currently set to `https://spotlessspaces-cleaning.com`).
 - Double check the Tidio chat script in `app/layout.js` has your correct Public Key.

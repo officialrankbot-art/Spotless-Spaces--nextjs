@@ -1,6 +1,6 @@
 import "./globals.css";
 
-const siteUrl = "https://www.spotlessspaces-cleaning.com";
+const siteUrl = "https://spotlessspaces-cleaning.com";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -116,6 +116,7 @@ const jsonLd = {
       ["Daycare and child care center cleaning", "/daycare-cleaning"],
       ["Car dealership cleaning", "/car-dealership-cleaning"],
       ["Warehouse and light industrial cleaning", "/warehouse-cleaning"],
+      ["Retail store and showroom cleaning", "/retail-cleaning"],
       ["Residential cleaning", "/#residential"],
     ].map(([name, path]) => ({
       "@type": "Offer",

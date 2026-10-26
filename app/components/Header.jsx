@@ -1,6 +1,9 @@
+import PromoBar from "./PromoBar";
+
 export default function Header() {
   return (
     <header>
+      <PromoBar />
       <div className="wrap">
         <nav>
           <a href="/" className="brand">

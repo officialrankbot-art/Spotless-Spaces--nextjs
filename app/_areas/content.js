@@ -73,8 +73,39 @@ export const TOWNS = {
     local:
       "Gwynedd is right next to our North Wales base, so walkthroughs and follow-ups are quick.",
   },
+  "bucks-county": {
+    name: "Bucks County",
+    place: "Bucks County, PA",
+    shortPlace: "Bucks County",
+    region: true,
+    county: "Bucks County",
+    nearby: ["Chalfont", "Warrington", "Doylestown", "Warminster", "New Britain"],
+    intro:
+      "Spotless Spaces brings dependable commercial cleaning to offices, medical practices, gyms, daycares, and retail stores across central and lower Bucks County. We clean after hours on nightly, weekly, or custom schedules, follow a written checklist every visit, and keep the same crew on your building whenever possible.",
+    local:
+      "Our North Wales base sits right on the Montgomery–Bucks County line, so businesses in Chalfont, Warrington, Doylestown, and Warminster are a short drive away for walkthroughs and follow-ups.",
+  },
+  "main-line": {
+    name: "Main Line",
+    place: "the Main Line",
+    prep: "on",
+    region: true,
+    county: "Montgomery and Delaware Counties",
+    nearby: ["Wayne", "Bryn Mawr", "Ardmore", "Radnor", "Villanova"],
+    intro:
+      "From professional offices and medical suites to boutiques and fitness studios, Main Line businesses count on Spotless Spaces for consistent, checklist-driven commercial cleaning. We work around your hours and give you one point of contact for everything.",
+    local:
+      "We serve single-suite tenants and whole-building contracts along the Main Line, with a certificate of insurance ready for your landlord or property manager.",
+  },
 };
 
-export const TOWN_ORDER = ["north-wales", "ambler", "blue-bell", "horsham", "fort-washington", "plymouth-meeting", "gwynedd"];
+// Wording helpers so regions read naturally:
+// "in North Wales, PA" / "in Bucks County, PA" / "on the Main Line".
+export const townPlace = (t) => t.place || `${t.name}, PA`;
+export const inTown = (t) => `${t.prep || "in"} ${townPlace(t)}`;
+// Short form without ", PA": "in North Wales" / "in Bucks County" / "on the Main Line".
+export const inTownShort = (t) => `${t.prep || "in"} ${t.shortPlace || t.place || t.name}`;
+
+export const TOWN_ORDER = ["north-wales", "ambler", "blue-bell", "horsham", "fort-washington", "plymouth-meeting", "gwynedd", "bucks-county", "main-line"];
 
 export const townSlug = (key) => `commercial-cleaning-${key}-pa`;

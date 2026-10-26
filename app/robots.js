@@ -1,6 +1,6 @@
 export default function robots() {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://www.spotlessspaces-cleaning.com/sitemap.xml",
+    sitemap: "https://spotlessspaces-cleaning.com/sitemap.xml",
   };
 }

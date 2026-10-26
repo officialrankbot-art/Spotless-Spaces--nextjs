@@ -1,6 +1,6 @@
 import { TOWN_ORDER, townSlug } from "./_areas/content";
 
-const SITE_URL = "https://www.spotlessspaces-cleaning.com";
+const SITE_URL = "https://spotlessspaces-cleaning.com";
 
 export default function sitemap() {
   const now = new Date();
@@ -14,6 +14,7 @@ export default function sitemap() {
     { url: `${SITE_URL}/daycare-cleaning`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/car-dealership-cleaning`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/warehouse-cleaning`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/retail-cleaning`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/service-areas`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     ...TOWN_ORDER.map((k) => ({ url: `${SITE_URL}/${townSlug(k)}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 })),
   ];
