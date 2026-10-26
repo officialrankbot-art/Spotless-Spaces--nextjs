@@ -102,6 +102,10 @@ const jsonLd = {
     "Bucks County, PA",
   ],
   priceRange: "$$",
+  sameAs: [
+    "https://share.google/Ot25LO4qi7YkbnrBe",
+    "https://www.linkedin.com/company/spotlessspaces-cleaning/",
+  ],
   image: `${siteUrl}/logo.jpg`,
   logo: `${siteUrl}/logo.jpg`,
   hasOfferCatalog: {
