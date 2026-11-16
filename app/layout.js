@@ -141,6 +141,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Google tag (Google Analytics) */}
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-T9R8NSDH"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());`,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
