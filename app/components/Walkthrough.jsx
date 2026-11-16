@@ -1,5 +1,3 @@
-import PromoNote from "./PromoNote";
-
 export default function Walkthrough() {
   return (
     <section id="walkthrough" style={{background: 'var(--mist)'}}>
@@ -8,7 +6,6 @@ export default function Walkthrough() {
           <span className="eyebrow">Commercial Cleaning</span>
           <h2>Request a Free Walkthrough</h2>
           <p>Tell us about your space and we'll schedule an on-site (or virtual) walkthrough to build your custom commercial cleaning quote.</p>
-          <PromoNote />
         </div>
         <div className="quote-wrap reveal" style={{maxWidth: '640px', margin: '0 auto'}}>
           <div className="quote-card">
